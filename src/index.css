@@ -1,0 +1,212 @@
+/* Google Fonts — Funnel Display */
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400;500;600;700;800&display=swap');
+
+/* Tailwind CSS v4 */
+@import "tailwindcss";
+
+/* =============================================
+   DESIGN TOKENS
+   ============================================= */
+@theme {
+  /* Color Palette */
+  --color-primary:   #030412;
+  --color-midnight:  #06091f;
+  --color-navy:      #161a31;
+  --color-indigo:    #1f1e39;
+  --color-storm:     #282b4b;
+  --color-aqua:      #33c2cc;
+  --color-mint:      #57db96;
+  --color-royal:     #5c33cc;
+  --color-lavender:  #7a57db;
+  --color-fuchsia:   #ca2f8c;
+  --color-orange:    #cc6033;
+  --color-sand:      #d6995c;
+  --color-coral:     #ea4884;
+
+  /* Custom Animations */
+  --animate-orbit: orbit 20s linear infinite;
+  --animate-orbit-reverse: orbit 20s linear infinite reverse;
+  --animate-orbit-fast: orbit 10s linear infinite;
+  --animate-marquee: marquee var(--duration, 50s) linear infinite;
+  --animate-marquee-reverse: marquee var(--duration, 50s) linear infinite reverse;
+  --animate-marquee-vertical: marquee-vertical var(--duration, 50s) linear infinite;
+  --animate-flip-in: flip-in 0.4s ease forwards;
+  --animate-flip-out: flip-out 0.3s ease forwards;
+  --animate-float: float 4s ease-in-out infinite;
+
+  @keyframes orbit {
+    0% { transform: rotate(calc(var(--angle) * 1deg)) translateX(var(--radius)) rotate(calc(var(--angle) * -1deg)); }
+    100% { transform: rotate(calc((var(--angle) + 360) * 1deg)) translateX(var(--radius)) rotate(calc((var(--angle) + 360) * -1deg)); }
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-100% - var(--gap, 1rem))); }
+  }
+
+  @keyframes marquee-vertical {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(calc(-100% - var(--gap, 1rem))); }
+  }
+
+  @keyframes flip-in {
+    0% { opacity: 0; transform: rotateX(-90deg) translateY(10px); filter: blur(4px); }
+    100% { opacity: 1; transform: rotateX(0deg) translateY(0); filter: blur(0); }
+  }
+
+  @keyframes flip-out {
+    0% { opacity: 1; transform: rotateX(0deg) translateY(0); filter: blur(0); }
+    100% { opacity: 0; transform: rotateX(90deg) translateY(-10px) scale(0.9); filter: blur(4px); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(92, 51, 204, 0.3); }
+    50% { box-shadow: 0 0 40px rgba(92, 51, 204, 0.6); }
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+}
+
+/* =============================================
+   BASE STYLES
+   ============================================= */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #030412;
+  color: #ffffff;
+  font-family: 'Funnel Display', sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* =============================================
+   REUSABLE UTILITY CLASSES
+   ============================================= */
+
+/* Layout */
+.c-space {
+  @apply sm:px-10 px-5 lg:px-15;
+}
+
+.section-spacing {
+  @apply min-h-screen mt-20 md:mt-30;
+}
+
+/* Typography */
+.text-heading {
+  @apply font-bold text-3xl md:text-4xl;
+}
+
+.headtext {
+  @apply mt-2 mb-2 text-xl;
+}
+
+.subtext {
+  @apply text-neutral-400 text-sm md:text-base;
+  text-wrap: pretty;
+}
+
+/* Animations */
+.hover-animation {
+  @apply hover:-translate-y-1 duration-200;
+}
+
+/* Navigation */
+.nav-ul {
+  @apply flex flex-col items-center gap-4 sm:flex-row md:gap-6 relative z-20;
+}
+
+.nav-li {
+  @apply text-neutral-400 hover:text-white max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5;
+}
+
+.nav-link {
+  @apply text-lg md:text-base hover:text-white transition-colors;
+}
+
+/* Button */
+.btn {
+  @apply relative px-1 py-4 text-sm text-center rounded-full font-extralight bg-primary w-48 cursor-pointer overflow-hidden;
+}
+
+/* Bento Grid Cells */
+.grid-1 {
+  @apply row-span-2 md:col-span-3 h-60 md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
+}
+
+.grid-2 {
+  @apply row-span-1 md:col-span-3 h-60 md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
+}
+
+.grid-3 {
+  @apply row-span-1 md:col-span-3 h-60 md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
+}
+
+.grid-4 {
+  @apply row-span-1 md:col-span-2 h-60 md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
+}
+
+.grid-5 {
+  @apply row-span-1 md:col-span-4 h-60 md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
+}
+
+/* Bento Grid Card Color Variants */
+.grid-default-color {
+  @apply p-6 bg-gradient-to-b from-storm to-indigo rounded-2xl;
+}
+
+.grid-special-color {
+  @apply p-6 bg-gradient-to-b from-royal to-lavender rounded-2xl;
+}
+
+.grid-black-color {
+  @apply p-6 rounded-2xl;
+  background: linear-gradient(135deg, #3a3a3a, #242424, #3a3a3a);
+}
+
+/* Form Fields */
+.field-label {
+  @apply text-sm font-medium leading-none;
+}
+
+.field-input {
+  @apply w-full min-h-10 rounded-md px-3 py-2 text-sm bg-white/10 transition duration-200 placeholder:text-neutral-500 border border-white/10 mt-2 text-white outline-none;
+}
+
+.field-input-focus {
+  @apply focus:ring-2 focus:ring-white/20;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #06091f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #282b4b;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5c33cc;
+}

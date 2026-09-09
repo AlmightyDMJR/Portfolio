@@ -1,0 +1,179 @@
+// =============================================================
+// ALL PORTFOLIO CONTENT — Diganta Mukherjee (Version 1.0)
+// =============================================================
+
+export const myProjects = [
+  {
+    id: 1,
+    title: 'Sportify',
+    description:
+      'A comprehensive sports management platform designed for live scoring, tournament management, and club dashboards.',
+    subDescription: [
+      'Engineered live scoring mechanics and real-time updates for tournament management',
+      'Developed club dashboards with goal tracking and advanced analytics',
+      'Architected a highly scalable backend to handle concurrent live event traffic',
+      'Built a modern, responsive UI focused on an engaging sports fan experience',
+    ],
+    href: 'https://github.com',
+    image: '/assets/projects/project1.png',
+    tags: [
+      { id: 1, name: 'Next.js', path: '/assets/logos/nextjs.svg' },
+      { id: 2, name: 'TypeScript', path: '/assets/logos/typescript.svg' },
+      { id: 3, name: 'Node.js', path: '/assets/logos/nodejs.svg' },
+      { id: 4, name: 'Socket.IO', path: '/assets/logos/socketio.svg' },
+    ],
+  },
+  {
+    id: 2,
+    title: 'TenderX',
+    description:
+      'An AI-powered Tender Evaluation system that automates document intelligence and scoring.',
+    subDescription: [
+      'Integrated OCR and Document Intelligence to extract structured data from complex tenders',
+      'Implemented an Eligibility Analysis module to quickly filter unqualified bids',
+      'Engineered a Scoring Engine powered by AI to evaluate and rank proposals',
+      'Significantly reduced manual evaluation time from weeks to hours',
+    ],
+    href: 'https://github.com',
+    image: '/assets/projects/project1.png',
+    tags: [
+      { id: 1, name: 'Python', path: '/assets/logos/python.svg' },
+      { id: 2, name: 'FastAPI', path: '/assets/logos/fastapi.svg' },
+      { id: 3, name: 'React', path: '/assets/logos/react.svg' },
+      { id: 4, name: 'AI/ML', path: '/assets/logos/ai.svg' },
+    ],
+  },
+  {
+    id: 3,
+    title: 'Crop Diagnosis',
+    description:
+      'An AI-powered agricultural tool for rapid crop disease detection and tailored recommendations.',
+    subDescription: [
+      'Trained and deployed image analysis models for accurate crop disease prediction',
+      'Generated automated, actionable recommendations based on disease classification',
+      'Designed a farmer-friendly UI optimized for low-bandwidth mobile devices',
+      'Bridged the gap between cutting-edge AI and practical agricultural needs',
+    ],
+    href: 'https://github.com',
+    image: '/assets/projects/project1.png',
+    tags: [
+      { id: 1, name: 'Python', path: '/assets/logos/python.svg' },
+      { id: 2, name: 'React', path: '/assets/logos/react.svg' },
+      { id: 3, name: 'Tailwind', path: '/assets/logos/tailwind.svg' },
+      { id: 4, name: 'TensorFlow', path: '/assets/logos/tensorflow.svg' },
+    ],
+  },
+  {
+    id: 4,
+    title: 'Eventrix',
+    description:
+      'An AI-powered Event Management platform with a Recommendation Engine and RAG Chatbot.',
+    subDescription: [
+      'Built a Recommendation Engine that matches users to relevant events via Social Feed',
+      'Created an innovative "Poster to JSON" feature using vision AI to auto-populate event details',
+      'Implemented a RAG (Retrieval-Augmented Generation) Chatbot to answer attendee queries',
+      'Developed a comprehensive Institute Dashboard for centralized event orchestration',
+    ],
+    href: 'https://github.com',
+    image: '/assets/projects/project1.png',
+    tags: [
+      { id: 1, name: 'Next.js', path: '/assets/logos/nextjs.svg' },
+      { id: 2, name: 'Prisma', path: '/assets/logos/prisma.svg' },
+      { id: 3, name: 'OpenAI API', path: '/assets/logos/openai.svg' },
+      { id: 4, name: 'MongoDB', path: '/assets/logos/mongodb.svg' },
+    ],
+  },
+];
+
+export const mySocials = [
+  {
+    name: 'GitHub',
+    href: 'https://github.com/AlmightyDMJR',
+    icon: '/assets/socials/github.svg',
+  },
+  {
+    name: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/diganta-mukherjee-a1b31a323/',
+    icon: '/assets/socials/linkedin.svg',
+  },
+  {
+    name: 'Instagram',
+    href: 'https://www.instagram.com/the_almighty_dmjr/',
+    icon: '/assets/socials/instagram.svg',
+  },
+];
+
+export const experiences = [
+  {
+    title: 'Full Stack Software Engineer',
+    job: 'Innovative Tech Solutions',
+    date: '2024 — Present',
+    contents: [
+      'Led the architecture and development of scalable web platforms serving thousands of concurrent users',
+      'Integrated AI-powered features across various products, enhancing user experience and automation',
+      'Designed and implemented microservices using Node.js, Express, and FastAPI',
+      'Mentored junior developers and established CI/CD pipelines to streamline deployment',
+    ],
+  },
+  {
+    title: 'Software Engineer',
+    job: 'Tech Startup Ecosystem',
+    date: '2022 — 2024',
+    contents: [
+      'Developed full-stack features using React, Next.js, and MongoDB for multiple startup clients',
+      'Optimized backend databases (Prisma/PostgreSQL) reducing query response times by 40%',
+      'Built interactive, cinematic UI components using Framer Motion and Three.js',
+      'Collaborated closely with product managers to translate business requirements into technical implementations',
+    ],
+  },
+  {
+    title: 'Key Achievements & Academics',
+    job: 'Continuous Learning',
+    date: 'Ongoing',
+    contents: [
+      'Hackathon Finalist in multiple national-level coding competitions',
+      'Active Open Source Contributor to high-profile React and Node.js repositories',
+      'Maintained a top percentile ranking in Competitive Programming on major platforms',
+      'Holds multiple certifications in Advanced Cloud Architecture and AI/ML Engineering',
+    ],
+  },
+];
+
+export const reviews = [
+  {
+    name: 'Sarah Mitchell',
+    username: '@sarah_dev',
+    body: 'Working with Diganta was an absolute game-changer. The quality of code and attention to performance details is unmatched. Our app is faster and more beautiful than ever.',
+    img: 'https://robohash.org/sarah_mitchell.png?set=set4',
+  },
+  {
+    name: 'Marcus Thompson',
+    username: '@marcus_cto',
+    body: "I've worked with dozens of developers and Diganta stands out for both technical depth and product thinking. Delivered a complex AI integration on time and under budget.",
+    img: 'https://robohash.org/marcus_thompson.png?set=set4',
+  },
+  {
+    name: 'Priya Sharma',
+    username: '@priya_pm',
+    body: 'Diganta took our vague product idea and turned it into a polished, production-ready app. The UI animations alone had our investors impressed at the demo.',
+    img: 'https://robohash.org/priya_sharma.png?set=set4',
+  },
+  {
+    name: 'David Kim',
+    username: '@dkim_eng',
+    body: 'The dashboard Diganta built reduced our operational overhead by 40%. Clean system design, great documentation, and an absolute joy to maintain.',
+    img: 'https://robohash.org/david_kim.png?set=set4',
+  },
+];
+
+// Tech stack icons for the orbiting circles
+export const techStack = [
+  { id: 1, name: 'React', color: '#61dafb', symbol: '⚛' },
+  { id: 2, name: 'TypeScript', color: '#3178c6', symbol: 'TS' },
+  { id: 3, name: 'Next.js', color: '#ffffff', symbol: '▲' },
+  { id: 4, name: 'Node.js', color: '#68a063', symbol: 'N' },
+  { id: 5, name: 'Python', color: '#ffd43b', symbol: '🐍' },
+  { id: 6, name: 'MongoDB', color: '#47A248', symbol: '🍃' },
+  { id: 7, name: 'Docker', color: '#2496ed', symbol: '🐳' },
+  { id: 8, name: 'Tailwind', color: '#06B6D4', symbol: '🌊' },
+];
