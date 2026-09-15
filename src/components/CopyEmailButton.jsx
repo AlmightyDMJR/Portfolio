@@ -27,16 +27,11 @@ const CopyEmailButton = ({ email = 'digantamukherjee6@gmail.com' }) => {
       onClick={handleCopy}
       id="copy-email-btn"
       aria-label="Copy email address to clipboard"
-      className="relative flex items-center gap-2 px-5 py-3 rounded-full text-sm font-medium text-white cursor-pointer overflow-hidden transition-all duration-300 hover:-translate-y-1"
-      style={{
-        background: copied
-          ? 'linear-gradient(135deg, #57db96, #33c2cc)'
-          : 'linear-gradient(135deg, rgba(92, 51, 204, 0.6), rgba(122, 87, 219, 0.4))',
-        border: '1px solid rgba(122, 87, 219, 0.4)',
-        boxShadow: copied
-          ? '0 0 20px rgba(87, 219, 150, 0.4)'
-          : '0 0 15px rgba(92, 51, 204, 0.3)',
-      }}
+      className={`relative flex items-center gap-2 px-5 py-2.5 rounded-full text-xs md:text-sm font-medium cursor-pointer overflow-hidden transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 ${
+        copied
+          ? 'bg-[#57DB96] text-[#064e3b] border border-[#57DB96] shadow-[0_2px_10px_rgba(87,219,150,0.25)]'
+          : 'bg-[#111827] hover:bg-[#1F2937] text-white border border-[#111827] shadow-[0_2px_8px_rgba(15,15,20,0.12)] hover:shadow-[0_4px_14px_rgba(15,15,20,0.18)]'
+      }`}
     >
       <AnimatePresence mode="wait">
         {copied ? (
@@ -49,9 +44,9 @@ const CopyEmailButton = ({ email = 'digantamukherjee6@gmail.com' }) => {
           >
             {/* Checkmark */}
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M3 8l3.5 3.5L13 4.5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M3 8l3.5 3.5L13 4.5" stroke="#064e3b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            <span>Email Copied!</span>
+            <span className="font-semibold text-[#064e3b]">Email Copied!</span>
           </motion.div>
         ) : (
           <motion.div

@@ -6,6 +6,7 @@ export const myProjects = [
   {
     id: 1,
     title: 'Sportify',
+    year: '2025',
     description:
       'A comprehensive sports management platform designed for live scoring, tournament management, and club dashboards.',
     subDescription: [
@@ -14,7 +15,7 @@ export const myProjects = [
       'Architected a highly scalable backend to handle concurrent live event traffic',
       'Built a modern, responsive UI focused on an engaging sports fan experience',
     ],
-    href: 'https://github.com',
+    href: 'https://github.com/Gintoki006/Sportify',
     image: '/assets/projects/project1.png',
     tags: [
       { id: 1, name: 'Next.js', path: '/assets/logos/nextjs.svg' },
@@ -26,6 +27,7 @@ export const myProjects = [
   {
     id: 2,
     title: 'TenderX',
+    year: '2025',
     description:
       'An AI-powered Tender Evaluation system that automates document intelligence and scoring.',
     subDescription: [
@@ -34,7 +36,7 @@ export const myProjects = [
       'Engineered a Scoring Engine powered by AI to evaluate and rank proposals',
       'Significantly reduced manual evaluation time from weeks to hours',
     ],
-    href: 'https://github.com',
+    href: 'https://github.com/Gintoki006/TenderX',
     image: '/assets/projects/project1.png',
     tags: [
       { id: 1, name: 'Python', path: '/assets/logos/python.svg' },
@@ -46,6 +48,7 @@ export const myProjects = [
   {
     id: 3,
     title: 'Crop Diagnosis',
+    year: '2026',
     description:
       'An AI-powered agricultural tool for rapid crop disease detection and tailored recommendations.',
     subDescription: [
@@ -54,7 +57,7 @@ export const myProjects = [
       'Designed a farmer-friendly UI optimized for low-bandwidth mobile devices',
       'Bridged the gap between cutting-edge AI and practical agricultural needs',
     ],
-    href: 'https://github.com',
+    href: 'https://github.com/AlmightyDMJR/CropCure',
     image: '/assets/projects/project1.png',
     tags: [
       { id: 1, name: 'Python', path: '/assets/logos/python.svg' },
@@ -66,6 +69,7 @@ export const myProjects = [
   {
     id: 4,
     title: 'Eventrix',
+    year: '2025',
     description:
       'An AI-powered Event Management platform with a Recommendation Engine and RAG Chatbot.',
     subDescription: [
@@ -74,7 +78,7 @@ export const myProjects = [
       'Implemented a RAG (Retrieval-Augmented Generation) Chatbot to answer attendee queries',
       'Developed a comprehensive Institute Dashboard for centralized event orchestration',
     ],
-    href: 'https://github.com',
+    href: 'https://github.com/Gintoki006/Eventrix',
     image: '/assets/projects/project1.png',
     tags: [
       { id: 1, name: 'Next.js', path: '/assets/logos/nextjs.svg' },
@@ -141,28 +145,54 @@ export const experiences = [
 
 export const reviews = [
   {
+    id: 1,
     name: 'Sarah Mitchell',
+    role: 'Staff Frontend Engineer',
+    company: 'NextLayer Labs',
     username: '@sarah_dev',
     body: 'Working with Diganta was an absolute game-changer. The quality of code and attention to performance details is unmatched. Our app is faster and more beautiful than ever.',
-    img: 'https://robohash.org/sarah_mitchell.png?set=set4',
+    img: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=256&h=256&q=80',
+    href: 'https://linkedin.com',
   },
   {
+    id: 2,
     name: 'Marcus Thompson',
+    role: 'CTO & Co-Founder',
+    company: 'HyperScale AI',
     username: '@marcus_cto',
     body: "I've worked with dozens of developers and Diganta stands out for both technical depth and product thinking. Delivered a complex AI integration on time and under budget.",
-    img: 'https://robohash.org/marcus_thompson.png?set=set4',
+    img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=256&h=256&q=80',
+    href: 'https://linkedin.com',
   },
   {
+    id: 3,
     name: 'Priya Sharma',
+    role: 'Principal Product Manager',
+    company: 'FinFlow Systems',
     username: '@priya_pm',
     body: 'Diganta took our vague product idea and turned it into a polished, production-ready app. The UI animations alone had our investors impressed at the demo.',
-    img: 'https://robohash.org/priya_sharma.png?set=set4',
+    img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=256&h=256&q=80',
+    href: 'https://linkedin.com',
   },
   {
+    id: 4,
     name: 'David Kim',
+    role: 'VP of Engineering',
+    company: 'MetricLayer Data',
     username: '@dkim_eng',
     body: 'The dashboard Diganta built reduced our operational overhead by 40%. Clean system design, great documentation, and an absolute joy to maintain.',
-    img: 'https://robohash.org/david_kim.png?set=set4',
+    img: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=256&h=256&q=80',
+    href: 'https://linkedin.com',
+  },
+  {
+    id: 5,
+    name: 'Elena Rostova',
+    role: 'Founder & CEO',
+    company: 'CloudPulse Analytics',
+    username: '@elena_ceo',
+    body: 'Diganta engineered our core platform from concept to launch with flawless execution. Reliable, proactive, and exceptionally skilled across the entire modern stack.',
+    img: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=256&h=256&q=80',
+    href: 'https://linkedin.com',
   },
 ];
 
@@ -177,3 +207,79 @@ export const techStack = [
   { id: 7, name: 'Docker', color: '#2496ed', symbol: '🐳' },
   { id: 8, name: 'Tailwind', color: '#06B6D4', symbol: '🌊' },
 ];
+
+// Hobbies and Interests Content Data
+export const hobbiesData = {
+  sports: [
+    { name: 'Football', icon: 'Trophy', detail: 'Tactics & Premier League' },
+    { name: 'Cricket', icon: 'Target', detail: 'Strategy & Test Matches' },
+    { name: 'Volleyball', icon: 'Activity', detail: 'Agility & Team Dynamics' },
+    { name: 'Formula 1', icon: 'Zap', detail: 'Aerodynamics & Race Strategy' },
+    { name: 'Badminton', icon: 'Flame', detail: 'Speed & Quick Reflexes' },
+    { name: 'Basketball', icon: 'Dribbble', detail: 'Pace & Spatial Awareness' },
+  ],
+  offTheScreen: [
+    {
+      title: 'Literature & Philosophy',
+      desc: 'Exploring deep existential prose and philosophical fiction from Dostoevsky to Camus and Murakami.',
+      tag: 'Reading',
+    },
+    {
+      title: 'Poetry & Expressive Writing',
+      desc: 'Appreciating the rhythm of classical and modern verses that condense complex human emotion into words.',
+      tag: 'Poetry',
+    },
+    {
+      title: 'Cinema as a Medium',
+      desc: 'Dissecting visual storytelling, atmospheric sound design, and auteur direction across global films.',
+      tag: 'Cinema',
+    },
+  ],
+  alwaysLearning: {
+    title: 'Continuous Craft & Technical Mastery',
+    narrative: 'Software engineering is an ever-evolving craft. I dedicate time weekly to exploring emerging distributed paradigms, next-generation AI agent architectures, and bleeding-edge web standards to keep systems resilient and state-of-the-art.',
+    chips: ['AI Agents & LLMs', 'Distributed Systems', 'WebGL & Shaders', 'Rust & Systems', 'Cloud Architecture'],
+  },
+  fallbackTracks: [
+    {
+      id: 'rL3AgkwbYgo',
+      title: 'Time',
+      artist: 'Pink Floyd',
+      album: 'The Dark Side of the Moon',
+      albumArt: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=300&q=80',
+      ytMusicUrl: 'https://music.youtube.com/watch?v=rL3AgkwbYgo',
+      musicUrl: 'https://music.youtube.com/watch?v=rL3AgkwbYgo',
+      isPlaying: false,
+    },
+    {
+      id: '34Na4j8AVgA',
+      title: 'Starboy',
+      artist: 'The Weeknd, Daft Punk',
+      album: 'Starboy',
+      albumArt: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=300&q=80',
+      ytMusicUrl: 'https://music.youtube.com/watch?v=34Na4j8AVgA',
+      musicUrl: 'https://music.youtube.com/watch?v=34Na4j8AVgA',
+      isPlaying: true,
+    },
+    {
+      id: '1Vko01DNT44',
+      title: 'Cornfield Chase',
+      artist: 'Hans Zimmer',
+      album: 'Interstellar (Original Motion Picture Soundtrack)',
+      albumArt: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=300&q=80',
+      ytMusicUrl: 'https://music.youtube.com/watch?v=1Vko01DNT44',
+      musicUrl: 'https://music.youtube.com/watch?v=1Vko01DNT44',
+      isPlaying: false,
+    },
+    {
+      id: 'hN_q-_nGv4U',
+      title: 'Experience',
+      artist: 'Ludovico Einaudi',
+      album: 'In a Time Lapse',
+      albumArt: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=300&q=80',
+      ytMusicUrl: 'https://music.youtube.com/watch?v=hN_q-_nGv4U',
+      musicUrl: 'https://music.youtube.com/watch?v=hN_q-_nGv4U',
+      isPlaying: false,
+    },
+  ],
+};

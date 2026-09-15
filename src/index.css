@@ -23,6 +23,26 @@
   --color-sand:      #d6995c;
   --color-coral:     #ea4884;
 
+  /* shadcn UI Theme Tokens (Cosmic Dark Theme) */
+  --color-background: #030412;
+  --color-foreground: #ffffff;
+  --color-card: #161a31;
+  --color-card-foreground: #ffffff;
+  --color-popover: #161a31;
+  --color-popover-foreground: #ffffff;
+  --color-muted: #1f1e39;
+  --color-muted-foreground: #9ca3af;
+  --color-secondary: #1f1e39;
+  --color-secondary-foreground: #ffffff;
+  --color-accent: #282b4b;
+  --color-accent-foreground: #ffffff;
+  --color-destructive: #ea4884;
+  --color-destructive-foreground: #ffffff;
+  --color-border: rgba(122, 87, 219, 0.25);
+  --color-input: rgba(255, 255, 255, 0.15);
+  --color-ring: #7a57db;
+
+
   /* Custom Animations */
   --animate-orbit: orbit 20s linear infinite;
   --animate-orbit-reverse: orbit 20s linear infinite reverse;
@@ -75,10 +95,47 @@
   }
 }
 
+/* Global Keyframes */
+@keyframes orbit {
+  0% {
+    transform: rotate(calc(var(--angle) * 1deg)) translateX(var(--radius)) rotate(calc(var(--angle) * -1deg));
+  }
+  100% {
+    transform: rotate(calc((var(--angle) + 360) * 1deg)) translateX(var(--radius)) rotate(calc((var(--angle) + 360) * -1deg));
+  }
+}
+
+/* =============================================
+   SHADCN / THEME VARIABLES
+   ============================================= */
+:root {
+  --background: #030412;
+  --foreground: #ffffff;
+  --card: #161a31;
+  --card-foreground: #ffffff;
+  --popover: #161a31;
+  --popover-foreground: #ffffff;
+  --primary: #5c33cc;
+  --primary-foreground: #ffffff;
+  --secondary: #1f1e39;
+  --secondary-foreground: #ffffff;
+  --muted: #1f1e39;
+  --muted-foreground: #9ca3af;
+  --accent: #282b4b;
+  --accent-foreground: #ffffff;
+  --destructive: #ea4884;
+  --destructive-foreground: #ffffff;
+  --border: rgba(122, 87, 219, 0.25);
+  --input: rgba(255, 255, 255, 0.15);
+  --ring: #7a57db;
+  --radius: 0.75rem;
+}
+
 /* =============================================
    BASE STYLES
    ============================================= */
 *, *::before, *::after {
+
   box-sizing: border-box;
 }
 

@@ -1,28 +1,25 @@
-import { useRef } from 'react';
 import { motion } from 'motion/react';
 
-import Card from '../components/Card';
+import TiltCard from '../components/TiltCard';
 import Globe from '../components/globe';
 import Frameworks from '../components/Frameworks';
 import CopyEmailButton from '../components/CopyEmailButton';
 
-const skillChips = [
-  { text: 'SOLID',      icon: '🏗️', desc: 'Architecture',   style: { top: '8%',  left: '5%',  rotate: '-5deg' } },
-  { text: 'Clean Code', icon: '✨', desc: 'Readability',    style: { top: '28%', left: '48%', rotate: '4deg'  } },
-  { text: 'Patterns',   icon: '🔷', desc: 'Design',         style: { top: '58%', left: '12%', rotate: '-3deg' } },
-  { text: 'TDD',        icon: '🧪', desc: 'Test First',     style: { top: '12%', left: '62%', rotate: '7deg'  } },
-  { text: 'A11y',       icon: '♿', desc: 'Accessibility',  style: { top: '62%', left: '52%', rotate: '-4deg' } },
-  { text: 'Performance',icon: '⚡', desc: 'Optimization',   style: { top: '78%', left: '8%',  rotate: '3deg'  } },
-  { text: 'DRY',        icon: '🔁', desc: "Don't Repeat",   style: { top: '6%',  left: '32%', rotate: '-2deg' } },
-  { text: 'Type Safety',icon: '🛡️', desc: 'TypeScript',     style: { top: '44%', left: '70%', rotate: '6deg'  } },
+const corePrinciples = [
+  'SOLID',
+  'Clean Code',
+  'Design Patterns',
+  'TDD',
+  'Accessibility',
+  'Performance',
+  'DRY',
+  'Type Safety',
 ];
 
 const About = () => {
-  const card2Ref = useRef(null);
-
   return (
     <section id="about" className="section-spacing c-space">
-      {/* Section header */}
+      {/* Section header on dark page */}
       <motion.div
         className="mb-12 text-center"
         initial={{ opacity: 0, y: 20 }}
@@ -35,151 +32,163 @@ const About = () => {
       </motion.div>
 
       {/* Bento Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-6 md:auto-rows-[18rem] gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-6 md:auto-rows-[18.5rem] gap-4">
 
         {/* Cell 1 — Intro bio */}
-        <motion.div
-          className="grid-1 grid-default-color"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+        <TiltCard
+          className="grid-1"
+          innerClassName="p-6 md:p-8 justify-between"
+          delay={0}
         >
-          <div className="flex flex-col justify-between h-full">
-            <div>
-              <p className="subtext uppercase tracking-widest text-xs mb-1">Full-Stack Developer</p>
-              <h3 className="headtext text-white font-bold">Hi, I&apos;m Diganta Mukherjee 👋</h3>
-              <p className="subtext mt-3">
-                I build world-class, production-quality software. Specializing in full-stack development, AI integration, and modern UI engineering, I turn complex problems into elegant, scalable solutions.
-              </p>
-              <p className="subtext mt-2">
-                My mission is to create cinematic, futuristic, and unforgettable web experiences that drive real product value.
-              </p>
-            </div>
-
-            {/* Status badge */}
-            <div className="flex items-center gap-2 mt-4">
+          <div className="flex flex-col">
+            {/* Header: Avatar initials + Role + Name */}
+            <div className="flex items-start gap-4 mb-3">
               <div
-                className="w-2 h-2 rounded-full"
-                style={{ background: '#57db96', boxShadow: '0 0 8px #57db96' }}
-              />
-              <span className="text-sm text-mint font-medium">Available for hire</span>
+                className="w-12 h-12 shrink-0 rounded-full bg-[#111827] text-white flex items-center justify-center font-bold text-sm tracking-wider shadow-[0_2px_8px_rgba(15,15,20,0.12)] border border-[#111827] select-none"
+                aria-hidden="true"
+              >
+                DM
+              </div>
+              <div>
+                <p className="text-[11px] font-semibold uppercase tracking-widest text-[#9CA3AF]">Full-Stack Developer</p>
+                <h3 className="text-xl md:text-2xl font-bold text-[#111827] tracking-tight mt-0.5">Diganta Mukherjee</h3>
+              </div>
             </div>
-          </div>
 
-          {/* Illustration image */}
-          <img
-            src="/assets/coding-pov.png"
-            alt="Developer coding at night"
-            className="absolute -bottom-6 -right-6 h-44 md:h-56 object-contain pointer-events-none opacity-80"
-          />
-        </motion.div>
-
-        {/* Cell 2 — Draggable skill chips */}
-        <motion.div
-          ref={card2Ref}
-          className="grid-2 grid-default-color"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-        >
-          <div className="h-full relative">
-            {/* Background label */}
-            <p
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-4xl font-black tracking-tight opacity-5 pointer-events-none select-none whitespace-nowrap"
-            >
-              CODE IS CRAFT
+            {/* Tight concrete copy (no AI fluff) */}
+            <p className="text-[#4B5563] text-sm leading-relaxed mt-2">
+              I build production-grade web applications with an emphasis on scalable architecture, clean code, and intuitive user interfaces.
+            </p>
+            <p className="text-[#4B5563] text-sm leading-relaxed mt-3">
+              Specializing in full-stack TypeScript, React, and modern cloud services, I turn complex business requirements into dependable software.
             </p>
 
-            <p className="subtext text-xs uppercase tracking-widest mb-2">Drag me!</p>
-
-            {skillChips.map((chip, i) => (
-              <Card
-                key={i}
-                text={chip.text}
-                icon={chip.icon}
-                desc={chip.desc}
-                containerRef={card2Ref}
-                style={chip.style}
-                index={i}
-              />
-            ))}
+            {/* Architecture Highlights */}
+            <div className="grid grid-cols-2 gap-3 mt-6 pt-5 border-t border-[rgba(0,0,0,0.06)]">
+              <div>
+                <p className="text-[11px] font-semibold uppercase tracking-wider text-[#9CA3AF]">Core Focus</p>
+                <p className="text-sm font-semibold text-[#111827] mt-0.5">Full-Stack Architecture</p>
+              </div>
+              <div>
+                <p className="text-[11px] font-semibold uppercase tracking-wider text-[#9CA3AF]">Specialization</p>
+                <p className="text-sm font-semibold text-[#111827] mt-0.5">React, Next.js & TS</p>
+              </div>
+            </div>
           </div>
-        </motion.div>
 
-        {/* Cell 3 — Globe / Timezone */}
-        <motion.div
-          className="grid-3 grid-black-color"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          {/* Status badge - Single mint accent #57DB96 */}
+          <div className="flex items-center gap-2.5 mt-6 pt-4 border-t border-[rgba(0,0,0,0.06)]">
+            <span className="relative flex h-2.5 w-2.5">
+              <span
+                className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75"
+                style={{ backgroundColor: '#57DB96' }}
+              />
+              <span
+                className="relative inline-flex rounded-full h-2.5 w-2.5"
+                style={{ backgroundColor: '#57DB96' }}
+              />
+            </span>
+            <span className="text-xs font-medium text-[#111827]">Available for hire & select projects</span>
+          </div>
+        </TiltCard>
+
+        {/* Cell 2 — Core principles badges (Neutral palette) */}
+        <TiltCard
+          className="grid-2"
+          innerClassName="p-6 md:p-7 justify-between"
+          delay={0.1}
         >
-          <div className="flex gap-4 h-full">
+          <div>
+            <p className="text-[11px] font-semibold uppercase tracking-widest text-[#9CA3AF] mb-1">Methodology</p>
+            <h3 className="text-lg md:text-xl font-bold text-[#111827] tracking-tight">Core Principles</h3>
+            <p className="text-xs text-[#6B7280] mt-1 mb-4">Engineering standards that keep codebases maintainable.</p>
+
+            <div className="flex flex-wrap gap-2">
+              {corePrinciples.map((label) => (
+                <div
+                  key={label}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-[rgba(0,0,0,0.08)] text-[#374151] text-xs font-medium shadow-[0_1px_2px_rgba(15,15,20,0.03)] hover:border-[rgba(0,0,0,0.18)] hover:text-[#111827] transition-colors select-none"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#9CA3AF]" />
+                  <span>{label}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </TiltCard>
+
+        {/* Cell 3 — Location / Globe */}
+        <TiltCard
+          className="grid-3"
+          innerClassName="p-6 md:p-7 justify-between"
+          delay={0.2}
+        >
+          <div className="flex gap-4 h-full items-center">
             <div className="flex flex-col justify-center flex-1">
-              <p className="subtext text-xs uppercase tracking-widest mb-1">Location</p>
-              <h3 className="headtext text-white font-bold text-lg">Kolkata, West Bengal</h3>
-              <p className="subtext text-xs mt-2">
-                IST (UTC+5:30) — Open to remote collaboration worldwide 🌍
+              <p className="text-[11px] font-semibold uppercase tracking-widest text-[#9CA3AF] mb-1">Location</p>
+              <h3 className="text-lg md:text-xl font-bold text-[#111827] tracking-tight">Kolkata, West Bengal</h3>
+              <p className="text-xs text-[#4B5563] mt-2 font-medium">
+                IST (UTC+5:30) • Remote First
               </p>
-              <p className="subtext text-xs mt-1">
-                Flexible hours for async teams across time zones.
+              <p className="text-xs text-[#6B7280] mt-1 leading-relaxed">
+                Flexible hours with dedicated async overlap for teams worldwide.
               </p>
             </div>
 
-            <div className="w-24 h-24 md:w-28 md:h-28 shrink-0 self-center">
+            <div className="w-28 h-28 md:w-36 md:h-36 shrink-0 flex items-center justify-center">
               <Globe className="w-full h-full" />
             </div>
           </div>
-        </motion.div>
+        </TiltCard>
 
         {/* Cell 4 — CTA / Copy email */}
-        <motion.div
-          className="grid-4 grid-special-color"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
+        <TiltCard
+          className="grid-4"
+          innerClassName="p-6 md:p-7 justify-center items-center text-center"
+          delay={0.3}
         >
-          <div className="flex flex-col items-center justify-center h-full text-center gap-4">
+          <div className="flex flex-col items-center justify-center gap-3 w-full">
             <div
-              className="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl"
-              style={{ background: 'rgba(255,255,255,0.15)' }}
+              className="w-10 h-10 rounded-xl bg-[#111827] text-white flex items-center justify-center shadow-[0_2px_8px_rgba(15,15,20,0.12)] border border-[#111827]"
+              aria-hidden="true"
             >
-              🚀
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M22 2L11 13" />
+                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+              </svg>
             </div>
             <div>
-              <h3 className="headtext text-white font-bold">Want to collaborate?</h3>
-              <p className="text-white/70 text-sm">Let&apos;s build something amazing together.</p>
+              <h3 className="text-lg font-bold text-[#111827]">Want to collaborate?</h3>
+              <p className="text-xs text-[#6B7280] mt-1">Let&apos;s build something great together.</p>
             </div>
-            <CopyEmailButton email="diganta@example.com" />
+            <CopyEmailButton email="digantamukherjee6@gmail.com" />
           </div>
-        </motion.div>
+        </TiltCard>
 
         {/* Cell 5 — Tech stack orbit */}
-        <motion.div
-          className="grid-5 grid-default-color"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
+        <TiltCard
+          className="grid-5"
+          innerClassName="p-6 md:p-7 justify-between"
+          delay={0.4}
         >
-          <div className="flex gap-4 h-full">
+          <div className="flex flex-col md:flex-row gap-4 h-full items-center">
             <div className="flex flex-col justify-center flex-1 shrink-0">
-              <p className="subtext text-xs uppercase tracking-widest mb-1">My Arsenal</p>
-              <h3 className="headtext text-white font-bold">Tech Stack</h3>
-              <p className="subtext text-xs mt-2">
-                React, Next.js, TypeScript, Node.js, Python, MongoDB, and modern AI tools —
-                always learning what's next.
+              <p className="text-[11px] font-semibold uppercase tracking-widest text-[#9CA3AF] mb-1">Ecosystem</p>
+              <h3 className="text-lg md:text-xl font-bold text-[#111827] tracking-tight">Tech Stack</h3>
+              <p className="text-xs text-[#4B5563] mt-2 leading-relaxed">
+                React, Next.js, TypeScript, Node.js, and cloud ecosystems for reliable end-to-end applications.
+              </p>
+              <p className="text-xs text-[#6B7280] mt-1 leading-relaxed">
+                Continuous adoption of performant tools and modern web standards.
               </p>
             </div>
 
-            <div className="flex-1 relative" style={{ minHeight: '200px' }}>
+            <div className="flex-1 relative w-full" style={{ minHeight: '180px' }}>
               <Frameworks />
             </div>
           </div>
-        </motion.div>
+        </TiltCard>
+
       </div>
     </section>
   );

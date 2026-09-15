@@ -13,6 +13,7 @@ const OrbitingCircles = ({
   reverse = false,
   iconSize = 32,
   showGuide = true,
+  stroke = 'rgba(0, 0, 0, 0.08)',
 }) => {
   const items = React.Children.toArray(children);
 
@@ -32,7 +33,7 @@ const OrbitingCircles = ({
             cy="50%"
             r={radius}
             fill="none"
-            stroke="rgba(122, 87, 219, 0.15)"
+            stroke={stroke}
             strokeWidth="1"
             strokeDasharray="4 4"
           />
