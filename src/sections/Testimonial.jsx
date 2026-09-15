@@ -15,7 +15,7 @@ const Testimonial = () => {
   }));
 
   return (
-    <section id="testimonials" className="section-spacing overflow-hidden py-12">
+    <section id="testimonials" className="overflow-hidden py-8 md:py-12 mt-6 md:mt-10">
       {/* Section header */}
       <motion.div
         className="c-space mb-10 text-center"

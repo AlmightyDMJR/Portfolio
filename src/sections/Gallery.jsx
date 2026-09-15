@@ -10,13 +10,13 @@ const Gallery = () => {
   };
 
   return (
-    <section id="stories" className="section-spacing relative overflow-hidden py-12 md:py-20">
+    <section id="stories" className="relative overflow-hidden py-4 md:py-8 my-4 md:my-8">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6">
         <PhotoGallery
           photos={galleryPhotos}
           subtitle="A Journey Through Visual Stories"
           title="Welcome to My"
-          highlightWord="Stories"
+          highlightWord="Moments"
           buttonText="Explore What People Say ↓"
           onButtonClick={handleScrollToTestimonials}
         />
