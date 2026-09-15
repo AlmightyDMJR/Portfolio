@@ -283,3 +283,60 @@ export const hobbiesData = {
     },
   ],
 };
+
+// =============================================================
+// PHOTO GALLERY STORIES (Easily replace images by changing URLs)
+// =============================================================
+export const galleryPhotos = [
+  {
+    id: 1,
+    order: 0,
+    x: "-320px",
+    y: "15px",
+    zIndex: 50,
+    direction: "left",
+    src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80",
+    alt: "Collaborative Engineering",
+  },
+  {
+    id: 2,
+    order: 1,
+    x: "-160px",
+    y: "32px",
+    zIndex: 40,
+    direction: "left",
+    src: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80",
+    alt: "System Design & Coding",
+  },
+  {
+    id: 3,
+    order: 2,
+    x: "0px",
+    y: "8px",
+    zIndex: 30,
+    direction: "right",
+    src: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80",
+    alt: "Space & High-Scale Systems",
+  },
+  {
+    id: 4,
+    order: 3,
+    x: "160px",
+    y: "22px",
+    zIndex: 20,
+    direction: "right",
+    src: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=600&q=80",
+    alt: "Creative Flow & Music",
+  },
+  {
+    id: 5,
+    order: 4,
+    x: "320px",
+    y: "44px",
+    zIndex: 10,
+    direction: "left",
+    src: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=600&q=80",
+    alt: "Visual Production & Atmosphere",
+  },
+];
+
