@@ -10,7 +10,7 @@ const Gallery = () => {
   };
 
   return (
-    <section id="stories" className="relative overflow-hidden py-4 md:py-8 my-4 md:my-8">
+    <section id="stories" className="section-spacing overflow-hidden py-4 md:py-8 my-4 md:my-8">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6">
         <PhotoGallery
           photos={galleryPhotos}
