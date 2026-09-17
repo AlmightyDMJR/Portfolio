@@ -79,23 +79,23 @@ const HeroText = () => {
       </div>
 
       {/* Mobile Layout */}
-      <div className="flex md:hidden flex-col items-center text-center gap-2 absolute bottom-28 left-0 right-0 z-10 px-5">
+      <div className="flex md:hidden flex-col items-center text-center gap-2 absolute bottom-20 sm:bottom-24 left-0 right-0 z-10 px-5">
         <motion.p
-          className="text-neutral-400 text-sm font-light tracking-widest uppercase"
+          className="text-neutral-400 text-xs sm:text-sm font-light tracking-widest uppercase"
           {...fadeUp(0.5)}
         >
           Hi, I&apos;m Diganta Mukherjee
         </motion.p>
 
         <motion.h1
-          className="text-2xl font-bold text-white leading-tight"
+          className="text-2xl sm:text-3xl font-bold text-white leading-tight"
           {...fadeUp(0.7)}
         >
           A Full Stack Software Engineer
         </motion.h1>
 
         <motion.div
-          className="text-2xl font-bold leading-tight"
+          className="text-2xl sm:text-3xl font-bold leading-tight"
           style={{
             background: 'linear-gradient(135deg, #7a57db, #33c2cc)',
             WebkitBackgroundClip: 'text',
@@ -108,26 +108,29 @@ const HeroText = () => {
         </motion.div>
 
         <motion.p
-          className="text-2xl font-bold text-white leading-tight"
+          className="text-2xl sm:text-3xl font-bold text-white leading-tight"
           {...fadeUp(1.1)}
         >
           Web Solutions
         </motion.p>
 
         <motion.div
-          className="flex gap-3 mt-3"
+          className="flex items-center justify-center gap-3 mt-4"
           {...fadeUp(1.3)}
         >
           <a
             href="#projects"
-            className="px-5 py-2 rounded-full text-xs font-semibold text-white"
-            style={{ background: 'linear-gradient(135deg, #5c33cc, #7a57db)' }}
+            className="px-6 py-2.5 min-h-[44px] flex items-center justify-center rounded-full text-xs font-semibold text-white shadow-lg active:scale-95 transition-transform"
+            style={{
+              background: 'linear-gradient(135deg, #5c33cc, #7a57db)',
+              boxShadow: '0 0 15px rgba(92, 51, 204, 0.4)',
+            }}
           >
-            Projects
+            View Projects
           </a>
           <a
             href="#contact"
-            className="px-5 py-2 rounded-full text-xs font-semibold text-neutral-300 border border-white/20"
+            className="px-6 py-2.5 min-h-[44px] flex items-center justify-center rounded-full text-xs font-semibold text-neutral-300 border border-white/20 active:scale-95 transition-transform"
           >
             Contact
           </a>

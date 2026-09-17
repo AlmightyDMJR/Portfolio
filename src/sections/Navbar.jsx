@@ -230,7 +230,7 @@ const Navbar = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25, ease: 'easeInOut' }}
-            className="md:hidden overflow-hidden border-t border-white/10"
+            className="md:hidden overflow-y-auto max-h-[calc(100vh-5rem)] border-t border-white/10 overscroll-contain"
             style={{ background: 'rgba(3, 4, 18, 0.98)', backdropFilter: 'blur(24px)' }}
           >
             <div className="c-space py-4 flex flex-col gap-2">

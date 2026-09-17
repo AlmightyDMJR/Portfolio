@@ -1,8 +1,20 @@
+import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { CardStack } from '@/components/ui/card-stack';
 import { reviews } from '../constants';
 
 const Testimonial = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   const stackItems = reviews.map((review) => ({
     id: review.id,
     title: review.name,
@@ -40,13 +52,13 @@ const Testimonial = () => {
         <CardStack
           items={stackItems}
           initialIndex={0}
-          cardWidth={560}
-          cardHeight={290}
-          overlap={0.46}
-          spreadDeg={36}
+          cardWidth={isMobile ? Math.min(340, typeof window !== 'undefined' ? window.innerWidth - 32 : 340) : 560}
+          cardHeight={isMobile ? 320 : 290}
+          overlap={isMobile ? 0.38 : 0.46}
+          spreadDeg={isMobile ? 22 : 36}
           perspectivePx={1200}
-          depthPx={110}
-          tiltXDeg={9}
+          depthPx={isMobile ? 80 : 110}
+          tiltXDeg={isMobile ? 5 : 9}
           activeLiftPx={18}
           activeScale={1.02}
           inactiveScale={0.93}

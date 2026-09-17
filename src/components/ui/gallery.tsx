@@ -125,6 +125,22 @@ export const PhotoGallery = ({
 }: PhotoGalleryProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  const getResponsiveX = (x: string | number) => {
+    if (!isMobile) return x;
+    const num = typeof x === "number" ? x : parseFloat(x);
+    return isNaN(num) ? x : `${Math.round(num * 0.42)}px`;
+  };
 
   useEffect(() => {
     // First make the container visible with a fade-in
@@ -193,7 +209,7 @@ export const PhotoGallery = ({
         {title} <span className="text-rose-500">{highlightWord}</span>
       </h3>
 
-      <div className="relative mb-8 h-[350px] w-full items-center justify-center lg:flex">
+      <div className="relative mb-8 h-[280px] md:h-[350px] w-full items-center justify-center lg:flex">
         <motion.div
           className="relative mx-auto flex w-full max-w-7xl justify-center"
           initial={{ opacity: 0 }}
@@ -206,7 +222,7 @@ export const PhotoGallery = ({
             initial="hidden"
             animate={isLoaded ? "visible" : "hidden"}
           >
-            <div className="relative h-[220px] w-[220px]">
+            <div className="relative h-[170px] w-[170px] md:h-[220px] md:w-[220px]">
               {/* Render photos in reverse order so that higher z-index photos are rendered later in the DOM */}
               {[...photos].reverse().map((photo) => (
                 <motion.div
@@ -215,14 +231,14 @@ export const PhotoGallery = ({
                   style={{ zIndex: photo.zIndex }}
                   variants={photoVariants}
                   custom={{
-                    x: photo.x,
+                    x: getResponsiveX(photo.x),
                     y: photo.y,
                     order: photo.order,
                   }}
                 >
                   <Photo
-                    width={220}
-                    height={220}
+                    width={isMobile ? 170 : 220}
+                    height={isMobile ? 170 : 220}
                     src={photo.src}
                     alt={photo.alt || "Gallery photo"}
                     direction={photo.direction}

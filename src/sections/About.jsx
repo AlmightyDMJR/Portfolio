@@ -156,7 +156,7 @@ const About = () => {
               </p>
             </div>
 
-            <div className="w-28 h-28 md:w-36 md:h-36 shrink-0 flex items-center justify-center">
+            <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36 shrink-0 flex items-center justify-center">
               <Globe className="w-full h-full" />
             </div>
           </div>

@@ -121,9 +121,9 @@ export function ProjectShowcase({
         </h2>
       )}
 
-      {/* Floating cursor preview card */}
+      {/* Floating cursor preview card (Desktop only) */}
       <div
-        className="pointer-events-none fixed z-50 overflow-hidden rounded-xl shadow-2xl transition-all"
+        className="pointer-events-none fixed z-50 overflow-hidden rounded-xl shadow-2xl transition-all hidden md:block"
         style={{
           left: containerOffset.left,
           top: containerOffset.top,
@@ -221,6 +221,18 @@ export function ProjectShowcase({
                     >
                       {project.description}
                     </p>
+
+                    {/* Mobile-only inline preview image */}
+                    {project.image && (
+                      <div className="block md:hidden mt-3 rounded-xl overflow-hidden border border-border/40 w-full h-44 bg-secondary/30 relative shadow-md">
+                        <img
+                          src={project.image}
+                          alt={project.title}
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                        />
+                      </div>
+                    )}
                   </div>
 
                   {/* Year badge */}

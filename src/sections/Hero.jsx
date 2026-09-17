@@ -42,7 +42,7 @@ const Hero = () => {
 
       {/* 3D Canvas */}
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 pointer-events-none md:pointer-events-auto"
         style={{ zIndex: 1 }}
       >
         <Canvas
@@ -55,12 +55,12 @@ const Hero = () => {
           <directionalLight position={[-5, -5, -5]} intensity={0.3} color="#33c2cc" />
 
           <Suspense fallback={<Loader />}>
-            <group position={isMobile ? [0, 0, 0] : [1.5, 0, 0]}>
+            <group position={isMobile ? [0, 0.35, 0] : [1.5, 0, 0]}>
               <Astronaut />
             </group>
             <FloatingAstronaut
-              position={isMobile ? [-1.0, 0.6, 0] : [-1.8, 0.4, 0]}
-              scale={isMobile ? 0.28 : 0.36}
+              position={isMobile ? [-0.85, 0.85, 0] : [-1.8, 0.4, 0]}
+              scale={isMobile ? 0.24 : 0.36}
             />
           </Suspense>
 
