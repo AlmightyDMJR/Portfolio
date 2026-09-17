@@ -51,7 +51,7 @@ function _aw_mat(color, opts = {}) {
 }
 
 // ─── Helmet (sphere shell + visor cap + neck ring) ────────────────────────────
-function _aw_Helmet() {
+function AwHelmet() {
   const mats = useMemo(() => ({
     helmet: _aw_mat(_aw_HELMET_COLOR, { roughness: 0.3, metalness: 0.2 }),
     visor: _aw_mat(_aw_VISOR_COLOR, {
@@ -83,7 +83,7 @@ function _aw_Helmet() {
 }
 
 // ─── Torso (capsule + chest panel + shoulder pads + PLSS backpack) ─────────────
-function _aw_Torso() {
+function AwTorso() {
   const mats = useMemo(() => ({
     suit:     _aw_mat(_aw_SUIT_COLOR,     { roughness: 0.6 }),
     panel:    _aw_mat(_aw_PANEL_COLOR,    { roughness: 0.35, metalness: 0.3, emissive: new THREE.Color(0x7a5500), emissiveIntensity: 0.15 }),
@@ -124,7 +124,7 @@ function _aw_Torso() {
 }
 
 // ─── One arm (upper capsule + elbow sphere + lower capsule + glove sphere) ────
-function _aw_Arm({ side }) {
+function AwArm({ side }) {
   const armRef = useRef();
   const mats = useMemo(() => ({
     suit:  _aw_mat(_aw_SUIT_COLOR,  { roughness: 0.6 }),
@@ -159,7 +159,7 @@ function _aw_Arm({ side }) {
 }
 
 // ─── One leg (upper capsule + knee sphere + lower capsule + boot box) ─────────
-function _aw_Leg({ side }) {
+function AwLeg({ side }) {
   const legRef = useRef();
   const mats = useMemo(() => ({
     suit: _aw_mat(_aw_SUIT_COLOR, { roughness: 0.6 }),
@@ -194,7 +194,7 @@ function _aw_Leg({ side }) {
 }
 
 // ─── Root floating group (vertical bob + horizontal drift + tumble) ───────────
-function _aw_FloatingGroup({ children }) {
+function AwFloatingGroup({ children }) {
   const ref = useRef();
 
   useFrame(({ clock }) => {
@@ -224,14 +224,14 @@ function _aw_FloatingGroup({ children }) {
  */
 const FloatingAstronaut = (props) => (
   <group {...props}>
-    <_aw_FloatingGroup>
-      <_aw_Helmet />
-      <_aw_Torso />
-      <_aw_Arm side={-1} />
-      <_aw_Arm side={1} />
-      <_aw_Leg side={-1} />
-      <_aw_Leg side={1} />
-    </_aw_FloatingGroup>
+    <AwFloatingGroup>
+      <AwHelmet />
+      <AwTorso />
+      <AwArm side={-1} />
+      <AwArm side={1} />
+      <AwLeg side={-1} />
+      <AwLeg side={1} />
+    </AwFloatingGroup>
   </group>
 );
 

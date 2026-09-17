@@ -1,8 +1,7 @@
-import { Suspense, useRef } from 'react';
+import { Suspense } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { PerspectiveCamera } from '@react-three/drei';
 import { useMediaQuery } from 'react-responsive';
-import * as THREE from 'three';
 import * as easing from 'maath/easing';
 
 import Astronaut from '../components/Astronaut';
@@ -13,8 +12,6 @@ import ParallaxBackground from '../components/parallaxBackground';
 
 // Camera rig that smoothly follows mouse position
 const Rig = ({ isMobile }) => {
-  const vec = new THREE.Vector3();
-
   useFrame((state) => {
     const { x, y } = state.pointer;
     const targetX = isMobile ? 0 : x * 0.5;

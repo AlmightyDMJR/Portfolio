@@ -67,11 +67,32 @@ const About = () => {
             <div className="grid grid-cols-2 gap-3 mt-6 pt-5 border-t border-[rgba(0,0,0,0.06)]">
               <div>
                 <p className="text-[11px] font-semibold uppercase tracking-wider text-[#9CA3AF]">Core Focus</p>
-                <p className="text-sm font-semibold text-[#111827] mt-0.5">Full-Stack Architecture</p>
+                <p className="text-sm font-semibold text-[#111827] mt-0.5">
+                  Full-Stack Architecture <br />
+                  Agentic AI <br />
+                  DevOps
+                </p>
+                
               </div>
               <div>
                 <p className="text-[11px] font-semibold uppercase tracking-wider text-[#9CA3AF]">Specialization</p>
-                <p className="text-sm font-semibold text-[#111827] mt-0.5">React, Next.js & TS</p>
+                <p className="text-sm font-semibold text-[#111827] mt-0.5">
+                  React <br />
+                  Next.js <br />
+                  TypeScript <br />
+                  Node.js <br />
+                  MongoDB <br />
+                  PostgreSQL <br />
+                  Git & GitHub <br />
+                  Framer Motion <br />
+                  Docker <br />
+                  CI/CD Pipelines <br />
+                  AWS <br />
+                  Kubernetes <br />
+                  
+                  
+                  
+                  </p>
               </div>
             </div>
           </div>
