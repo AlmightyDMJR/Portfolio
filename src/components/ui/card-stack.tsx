@@ -277,7 +277,7 @@ export function CardStack<T extends CardStackItem>({
                     "absolute bottom-0 rounded-2xl overflow-hidden shadow-2xl",
                     "will-change-transform select-none",
                     isActive
-                      ? "cursor-grab active:cursor-grabbing ring-1 ring-white/10"
+                      ? "cursor-grab active:cursor-grabbing"
                       : "cursor-pointer",
                   )}
                   style={{

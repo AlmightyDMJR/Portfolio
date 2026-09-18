@@ -76,7 +76,7 @@ const Navbar = () => {
       href: '#projects',
     },
     {
-      name: 'Hobbies',
+      name: 'Beyond',
       icon: <Sparkles className="w-5 h-5" />,
       onClick: (e) => scrollToSection(e, '#hobbies'),
       href: '#hobbies',

@@ -14,6 +14,7 @@ import {
 import { hobbiesData } from '../constants/index.js';
 import TiltCard from '../components/TiltCard';
 import YouTubeMusicNowPlaying from '../components/YouTubeMusicNowPlaying';
+import InterestsShowcase from '../components/InterestsShowcase';
 
 // Icon map for sports
 const sportIconMap = {
@@ -83,7 +84,7 @@ const Hobbies = () => {
                 return (
                   <div
                     key={sport.name}
-                    className="p-3 rounded-xl bg-white border border-black/[0.05] hover:border-black/[0.1] hover:shadow-sm transition-all duration-200 flex flex-col justify-between group"
+                    className="p-3 rounded-xl bg-white border border-neutral-200/90 hover:border-neutral-400/80 shadow-[0_1px_3px_rgba(0,0,0,0.04)] hover:shadow-sm transition-all duration-200 flex flex-col justify-between group"
                   >
                     <div className="flex items-center justify-between mb-1.5">
                       <span className="text-xs font-bold text-[#111827]">
@@ -134,7 +135,7 @@ const Hobbies = () => {
                 return (
                   <div
                     key={item.title}
-                    className="p-3.5 rounded-xl bg-white border border-black/[0.05] hover:border-black/[0.1] hover:shadow-sm transition-all duration-200"
+                    className="p-3.5 rounded-xl bg-white border border-neutral-200/90 hover:border-neutral-400/80 shadow-[0_1px_3px_rgba(0,0,0,0.04)] hover:shadow-sm transition-all duration-200"
                   >
                     <div className="flex items-center justify-between gap-2 mb-1">
                       <h4 className="text-xs font-bold text-[#111827] flex items-center gap-1.5">
@@ -213,6 +214,9 @@ const Hobbies = () => {
 
       {/* YouTube Music Subsection */}
       <YouTubeMusicNowPlaying />
+
+      {/* 4 Interests Flip & Tilt Cards: Anime, Sports, Music, Gaming */}
+      <InterestsShowcase />
     </section>
   );
 };

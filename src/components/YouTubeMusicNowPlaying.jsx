@@ -96,7 +96,7 @@ const YouTubeMusicNowPlaying = () => {
         {/* Bento Grid: Featured Spotlight + Track Queue */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 pt-6 items-center">
           {/* Main Featured Player Spotlight */}
-          <div className="lg:col-span-6 flex flex-col sm:flex-row items-center sm:items-stretch gap-5 p-4 rounded-xl bg-white border border-black/[0.05] shadow-[0_2px_12px_rgba(15,15,20,0.04)]">
+          <div className="lg:col-span-6 flex flex-col sm:flex-row items-center sm:items-stretch gap-5 p-4 rounded-xl bg-white border border-neutral-200/90 shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
             {/* Album Cover with Vinyl Spin Badge */}
             <div className="relative w-36 h-36 sm:w-32 sm:h-32 shrink-0 rounded-xl overflow-hidden shadow-md group">
               <img
@@ -179,7 +179,7 @@ const YouTubeMusicNowPlaying = () => {
                     className={`flex items-center justify-between p-2.5 rounded-xl border text-left transition-all duration-200 ${
                       isSelected
                         ? 'bg-red-50/60 border-red-300 shadow-sm'
-                        : 'bg-white hover:bg-neutral-50 border-black/[0.05] hover:border-black/[0.1]'
+                        : 'bg-white hover:bg-neutral-50 border-neutral-200/90 hover:border-neutral-400/80'
                     }`}
                   >
                     <div className="flex items-center gap-3 min-w-0 pr-2">

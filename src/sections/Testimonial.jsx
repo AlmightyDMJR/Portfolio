@@ -69,11 +69,9 @@ const Testimonial = () => {
           intervalMs={3600}
           pauseOnHover
           showDots
-          renderCard={(item, { active }) => (
+          renderCard={(item) => (
             <div
-              className={`relative h-full w-full p-6 md:p-8 flex flex-col justify-between rounded-2xl bg-[#FAFAFA] text-[#111827] border border-[rgba(0,0,0,0.06)] shadow-[0_4px_24px_rgba(15,15,20,0.06)] transition-all duration-300 ${
-                active ? 'ring-1 ring-black/[0.08]' : ''
-              }`}
+              className="relative h-full w-full p-6 md:p-8 flex flex-col justify-between rounded-2xl pro-card-border text-[#111827]"
             >
               {/* Top Row: Author details + Quote mark */}
               <div className="flex items-start justify-between gap-4">

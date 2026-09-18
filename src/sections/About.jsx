@@ -69,7 +69,7 @@ const About = () => {
                 <p className="text-[11px] font-semibold uppercase tracking-wider text-[#9CA3AF]">Core Focus</p>
                 <p className="text-sm font-semibold text-[#111827] mt-0.5">
                   Full-Stack Architecture <br />
-                  Agentic AI <br />
+                  Agentic AI & LLM <br />
                   DevOps
                 </p>
                 

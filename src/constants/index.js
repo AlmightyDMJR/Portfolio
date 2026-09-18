@@ -345,7 +345,7 @@ export const galleryPhotos = [
     zIndex: 50,
     direction: "left",
     src: "/assets/leetcode.png",
-    alt: "Collaborative Engineering",
+    alt: "Coding Consistency & Achievement",
   }, 
   {
     id: 2,
@@ -355,7 +355,7 @@ export const galleryPhotos = [
     zIndex: 40,
     direction: "left",
     src: "/assets/skillde.png",
-    alt: "System Design & Coding",
+    alt: "Hackathon Winners",
   }, 
   {
     id: 3,
@@ -365,7 +365,7 @@ export const galleryPhotos = [
     zIndex: 30,
     direction: "right",
     src: "/assets/coding-pov.png",
-    alt: "Space & High-Scale Systems",
+    alt: "Myself",
   },
   {
     id: 4,
@@ -375,7 +375,7 @@ export const galleryPhotos = [
     zIndex: 20,
     direction: "right",
     src: "/assets/geekathon.png",
-    alt: "Creative Flow & Music",
+    alt: "Hackathon Finalist",
   },
   {
     id: 5,
@@ -385,7 +385,113 @@ export const galleryPhotos = [
     zIndex: 10,
     direction: "left",
     src: "/assets/setup.png",
-    alt: "Visual Production & Atmosphere",
+    alt: "My Setup",
+  },
+];
+
+// =============================================================
+// INTERESTS & PASSIONS SHOWCASE (Flip & Tilt Cards)
+// =============================================================
+export const interestsCardsData = [
+  {
+    id: 'anime',
+    category: 'Anime',
+    subtitle: 'Narratives & Artistry',
+    iconName: 'Tv',
+    accent: {
+      bg: 'bg-rose-50',
+      border: 'border-rose-200/60',
+      text: 'text-rose-600',
+      dot: 'bg-rose-500',
+      badge: 'bg-rose-50 text-rose-700 border-rose-100',
+      glow: 'rgba(244, 63, 94, 0.12)',
+    },
+    allTimeFavourite: {
+      title: 'Attack on Titan & Death Note',
+      detail: 'Intricate storytelling, moral complexity & mind-bending psychological thrillers.',
+    },
+    genres: ['Psychological Thriller', 'Shonen', 'Seinen', 'Dark Fantasy'],
+    currentFavourite: {
+      title: 'Solo Leveling & Frieren',
+      detail: 'High-octane hunter ascension paired with serene, poetic high-fantasy lore.',
+      status: 'Currently Watching',
+    },
+    quote: 'Drawn to layered narratives, moral ambiguity, and cinematic animation craft.',
+  },
+  {
+    id: 'sports',
+    category: 'Sports',
+    subtitle: 'Tactics & Endurance',
+    iconName: 'Trophy',
+    accent: {
+      bg: 'bg-amber-50',
+      border: 'border-amber-200/60',
+      text: 'text-amber-600',
+      dot: 'bg-amber-500',
+      badge: 'bg-amber-50 text-amber-700 border-amber-100',
+      glow: 'rgba(245, 158, 11, 0.12)',
+    },
+    allTimeFavourite: {
+      title: 'Football & Test Cricket',
+      detail: 'Premier League tactical battles and the slow-burn psychological grit of Test cricket.',
+    },
+    genres: ['Tactical Football', 'Test Cricket', 'Formula 1', 'Volleyball'],
+    currentFavourite: {
+      title: 'Formula 1 & UCL',
+      detail: 'Aerodynamic telemetry, pit-stop strategy, and high-stakes European nights.',
+      status: 'Season Active',
+    },
+    quote: 'Whether on pitch, court, or track — strategy, stamina, and reflexes fuel my energy.',
+  },
+  {
+    id: 'music',
+    category: 'Music',
+    subtitle: 'Rhythm & Soundscapes',
+    iconName: 'Headphones',
+    accent: {
+      bg: 'bg-cyan-50',
+      border: 'border-cyan-200/60',
+      text: 'text-cyan-600',
+      dot: 'bg-cyan-500',
+      badge: 'bg-cyan-50 text-cyan-700 border-cyan-100',
+      glow: 'rgba(6, 182, 212, 0.12)',
+    },
+    allTimeFavourite: {
+      title: 'Pink Floyd & Hans Zimmer',
+      detail: 'Mind-expanding progressive rock concept albums and monumental cinematic scores.',
+    },
+    genres: ['Progressive Rock', 'Synthwave', 'Neo-Classical', 'Cinematic Ambient'],
+    currentFavourite: {
+      title: 'The Weeknd & Einaudi',
+      detail: 'Dusk-till-dawn synth-pop rhythms and meditative minimalist piano acoustics.',
+      status: 'On Heavy Repeat',
+    },
+    quote: 'The sonic architecture setting rhythm and deep mental focus for building systems.',
+  },
+  {
+    id: 'gaming',
+    category: 'Gaming',
+    subtitle: 'Immersion & Strategy',
+    iconName: 'Gamepad2',
+    accent: {
+      bg: 'bg-purple-50',
+      border: 'border-purple-200/60',
+      text: 'text-purple-600',
+      dot: 'bg-purple-500',
+      badge: 'bg-purple-50 text-purple-700 border-purple-100',
+      glow: 'rgba(168, 85, 247, 0.12)',
+    },
+    allTimeFavourite: {
+      title: 'The Witcher 3 & RDR 2',
+      detail: 'Living open worlds, uncompromising character arcs, and cinematic storytelling.',
+    },
+    genres: ['Story-Driven RPGs', 'Tactical Shooters', 'Souls-like', 'Open World'],
+    currentFavourite: {
+      title: 'Elden Ring & Valorant',
+      detail: 'Relentless combat mastery and fast-twitch tactical team coordination.',
+      status: 'Active Quest',
+    },
+    quote: 'Game design is the highest synergy of software architecture, art, and player agency.',
   },
 ];
 
