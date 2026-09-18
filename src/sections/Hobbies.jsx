@@ -60,6 +60,7 @@ const Hobbies = () => {
           className="w-full flex"
           innerClassName="p-6 md:p-8 flex-col justify-between"
           delay={0}
+          glowColor="amber"
         >
           <div>
             {/* Card Header */}
@@ -111,6 +112,7 @@ const Hobbies = () => {
           className="w-full flex"
           innerClassName="p-6 md:p-8 flex-col justify-between"
           delay={0.1}
+          glowColor="purple"
         >
           <div>
             {/* Card Header */}
@@ -165,6 +167,7 @@ const Hobbies = () => {
           className="w-full flex"
           innerClassName="p-6 md:p-8 flex-col justify-between"
           delay={0.2}
+          glowColor="emerald"
         >
           <div>
             {/* Card Header */}

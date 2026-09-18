@@ -71,7 +71,7 @@ const Testimonial = () => {
           showDots
           renderCard={(item) => (
             <div
-              className="relative h-full w-full p-6 md:p-8 flex flex-col justify-between rounded-2xl pro-card-border text-[#111827]"
+              className="relative h-full w-full p-6 md:p-8 flex flex-col justify-between rounded-2xl bg-[#FAFAFA] border border-[rgba(0,0,0,0.06)] shadow-[0_8px_30px_rgba(0,0,0,0.12)] text-[#111827] overflow-hidden"
             >
               {/* Top Row: Author details + Quote mark */}
               <div className="flex items-start justify-between gap-4">

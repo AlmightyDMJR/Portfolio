@@ -395,7 +395,7 @@ export const galleryPhotos = [
 export const interestsCardsData = [
   {
     id: 'anime',
-    category: 'Anime',
+    category: 'Anime & Movies',
     subtitle: 'Narratives & Artistry',
     iconName: 'Tv',
     accent: {
@@ -407,13 +407,13 @@ export const interestsCardsData = [
       glow: 'rgba(244, 63, 94, 0.12)',
     },
     allTimeFavourite: {
-      title: 'Attack on Titan & Death Note',
-      detail: 'Intricate storytelling, moral complexity & mind-bending psychological thrillers.',
+      title: 'Attack on Titan & Interstellar',
+      detail: 'Intricate storytelling, moral complexity & mind-bending thrillers.',
     },
-    genres: ['Psychological Thriller', 'Shonen', 'Seinen', 'Dark Fantasy'],
+    genres: ['Psychological Thriller', 'Science Fiction', 'Fantasy - Drama','Slice Of Life', 'Mystery'],
     currentFavourite: {
-      title: 'Solo Leveling & Frieren',
-      detail: 'High-octane hunter ascension paired with serene, poetic high-fantasy lore.',
+      title: 'Bleach TYBW',
+      
       status: 'Currently Watching',
     },
     quote: 'Drawn to layered narratives, moral ambiguity, and cinematic animation craft.',
@@ -433,15 +433,15 @@ export const interestsCardsData = [
     },
     allTimeFavourite: {
       title: 'Football & Test Cricket',
-      detail: 'Premier League tactical battles and the slow-burn psychological grit of Test cricket.',
+      detail: `CR7's legacy , Premier League tactical battles and the slow-burn psychological grit of Test cricket.`,
     },
     genres: ['Tactical Football', 'Test Cricket', 'Formula 1', 'Volleyball'],
     currentFavourite: {
       title: 'Formula 1 & UCL',
-      detail: 'Aerodynamic telemetry, pit-stop strategy, and high-stakes European nights.',
+      
       status: 'Season Active',
     },
-    quote: 'Whether on pitch, court, or track — strategy, stamina, and reflexes fuel my energy.',
+    quote: 'Whether on pitch,court,or track - strategy, stamina, and reflexes fuel my energy.',
   },
   {
     id: 'music',
@@ -457,13 +457,13 @@ export const interestsCardsData = [
       glow: 'rgba(6, 182, 212, 0.12)',
     },
     allTimeFavourite: {
-      title: 'Pink Floyd & Hans Zimmer',
-      detail: 'Mind-expanding progressive rock concept albums and monumental cinematic scores.',
+      title: 'Bruno Mars & Anuv Jain',
+      detail: 'Mind-expanding progressive genre-blending concept albums and monumental cinematic scores.',
     },
-    genres: ['Progressive Rock', 'Synthwave', 'Neo-Classical', 'Cinematic Ambient'],
+    genres: ['Hiphop','Progressive Rock', 'Pop - RnB', 'Ambient & Metal'],
     currentFavourite: {
-      title: 'The Weeknd & Einaudi',
-      detail: 'Dusk-till-dawn synth-pop rhythms and meditative minimalist piano acoustics.',
+      title: 'Talha Anjum & Joji',
+      detail: 'Deep heartbroken and soulful lyricism with eargasmic melodies & production.',
       status: 'On Heavy Repeat',
     },
     quote: 'The sonic architecture setting rhythm and deep mental focus for building systems.',
@@ -482,16 +482,16 @@ export const interestsCardsData = [
       glow: 'rgba(168, 85, 247, 0.12)',
     },
     allTimeFavourite: {
-      title: 'The Witcher 3 & RDR 2',
+      title: 'Ghost Of Tsushima & Far Cry 3',
       detail: 'Living open worlds, uncompromising character arcs, and cinematic storytelling.',
     },
-    genres: ['Story-Driven RPGs', 'Tactical Shooters', 'Souls-like', 'Open World'],
+    genres: ['Story-Driven RPGs', 'Tactical Shooters',  'Open World Builders', 'FPS'],
     currentFavourite: {
-      title: 'Elden Ring & Valorant',
-      detail: 'Relentless combat mastery and fast-twitch tactical team coordination.',
+      title: 'FC 26 & Valorant',
+      
       status: 'Active Quest',
     },
-    quote: 'Game design is the highest synergy of software architecture, art, and player agency.',
+    quote: 'Game design is the highest synergy of software architecture, art & storytelling.',
   },
 ];
 

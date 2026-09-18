@@ -39,6 +39,7 @@ const About = () => {
           className="grid-1"
           innerClassName="p-6 md:p-8 justify-between"
           delay={0}
+          glowColor="emerald"
         >
           <div className="flex flex-col">
             {/* Header: Avatar initials + Role + Name */}
@@ -118,6 +119,7 @@ const About = () => {
           className="grid-2"
           innerClassName="p-6 md:p-7 justify-between"
           delay={0.1}
+          glowColor="indigo"
         >
           <div>
             <p className="text-[11px] font-semibold uppercase tracking-widest text-[#9CA3AF] mb-1">Methodology</p>
@@ -143,6 +145,7 @@ const About = () => {
           className="grid-3"
           innerClassName="p-6 md:p-7 justify-between"
           delay={0.2}
+          glowColor="cyan"
         >
           <div className="flex gap-4 h-full items-center">
             <div className="flex flex-col justify-center flex-1">
@@ -167,6 +170,7 @@ const About = () => {
           className="grid-4"
           innerClassName="p-6 md:p-7 justify-center items-center text-center"
           delay={0.3}
+          glowColor="purple"
         >
           <div className="flex flex-col items-center justify-center gap-3 w-full">
             <div
@@ -191,6 +195,7 @@ const About = () => {
           className="grid-5"
           innerClassName="p-6 md:p-7 justify-between"
           delay={0.4}
+          glowColor="blue"
         >
           <div className="flex flex-col md:flex-row gap-4 h-full items-center">
             <div className="flex flex-col justify-center flex-1 shrink-0">

@@ -38,7 +38,7 @@ const YouTubeMusicNowPlaying = () => {
 
   return (
     <div className="w-full mt-10">
-      <TiltCard className="w-full" innerClassName="p-6 md:p-8">
+      <TiltCard className="w-full" innerClassName="p-6 md:p-8" glowColor="red">
         {/* Header bar */}
         <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-black/[0.06]">
           <div className="flex items-center gap-3">

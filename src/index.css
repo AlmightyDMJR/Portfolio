@@ -204,23 +204,23 @@ body {
 
 /* Bento Grid Cells */
 .grid-1 {
-  @apply row-span-2 md:col-span-3 h-auto min-h-[18rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
+  @apply row-span-2 md:col-span-3 h-auto min-h-[18rem] md:h-full relative hover:-translate-y-1 duration-200;
 }
 
 .grid-2 {
-  @apply row-span-1 md:col-span-3 h-auto min-h-[14rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
+  @apply row-span-1 md:col-span-3 h-auto min-h-[14rem] md:h-full relative hover:-translate-y-1 duration-200;
 }
 
 .grid-3 {
-  @apply row-span-1 md:col-span-3 h-auto min-h-[14rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
+  @apply row-span-1 md:col-span-3 h-auto min-h-[14rem] md:h-full relative hover:-translate-y-1 duration-200;
 }
 
 .grid-4 {
-  @apply row-span-1 md:col-span-2 h-auto min-h-[14rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
+  @apply row-span-1 md:col-span-2 h-auto min-h-[14rem] md:h-full relative hover:-translate-y-1 duration-200;
 }
 
 .grid-5 {
-  @apply row-span-1 md:col-span-4 h-auto min-h-[18rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
+  @apply row-span-1 md:col-span-4 h-auto min-h-[18rem] md:h-full relative hover:-translate-y-1 duration-200;
 }
 
 /* Bento Grid Card Color Variants */
@@ -238,8 +238,153 @@ body {
 }
 
 /* =============================================
-   PROFESSIONAL BLACK - GREYISH TEXTURED CARD BORDER
+   RUNNING BORDER BLOB ANIMATIONS (BLACK & GREYISH GLOW)
    ============================================= */
+@keyframes running-border {
+  0% {
+    top: 0%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+  }
+  25% {
+    top: 0%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    top: 100%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+  }
+  75% {
+    top: 100%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    top: 0%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes running-border-delayed {
+  0% {
+    top: 100%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+  }
+  25% {
+    top: 100%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    top: 0%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+  }
+  75% {
+    top: 0%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    top: 100%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes blob {
+  0% {
+    transform: translate(-100%, -100%);
+  }
+  25% {
+    transform: translate(0%, -100%);
+  }
+  50% {
+    transform: translate(0%, 0%);
+  }
+  75% {
+    transform: translate(-100%, 0%);
+  }
+  100% {
+    transform: translate(-100%, -100%);
+  }
+}
+
+.animate-running-border {
+  animation: running-border 4.5s linear infinite;
+}
+
+.animate-running-border-delayed {
+  animation: running-border-delayed 4.5s linear infinite;
+}
+
+.animate-blob {
+  animation: blob 5s linear infinite;
+}
+
+@keyframes border-circulate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.animate-border-circulate {
+  animation: border-circulate 4s linear infinite;
+  will-change: transform;
+}
+
+@keyframes border-beam {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+.animate-border-beam {
+  animation: border-beam 5s linear infinite;
+  will-change: offset-distance;
+}
+
+.card-border-mask-track {
+  padding: 4px;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+
+/* =============================================
+   PROFESSIONAL BLACK - GREYISH TEXTURED CARD BORDER
+   WITH LUMINOUS BLACKISH-GREY HOVER GLOW
+   ============================================= */
+@keyframes black-grey-glow {
+  0%, 100% {
+    box-shadow:
+      0 0 0 1.5px rgba(160, 174, 192, 0.4),
+      0 0 18px 2px rgba(100, 116, 139, 0.32),
+      0 0 38px 6px rgba(15, 23, 42, 0.65),
+      0 16px 40px -4px rgba(0, 0, 0, 0.8),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+  }
+  50% {
+    box-shadow:
+      0 0 0 1.5px rgba(203, 213, 225, 0.65),
+      0 0 28px 4px rgba(148, 163, 184, 0.45),
+      0 0 52px 10px rgba(15, 23, 42, 0.8),
+      0 20px 48px -4px rgba(0, 0, 0, 0.9),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+  }
+}
+
 .pro-card-border {
   position: relative;
   border: 2px solid transparent !important;
@@ -269,15 +414,29 @@ body {
     inset 0 0 0 1px rgba(0, 0, 0, 0.06),
     0 2px 4px rgba(0, 0, 0, 0.22),
     0 8px 24px -2px rgba(0, 0, 0, 0.32);
-  transition: box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-image 0.35s ease;
 }
 
 .pro-card-border:hover {
-  box-shadow:
-    0 0 0 1px #090a0d,
-    inset 0 0 0 1px rgba(0, 0, 0, 0.06),
-    0 4px 8px rgba(0, 0, 0, 0.26),
-    0 16px 36px -4px rgba(0, 0, 0, 0.44);
+  background-image:
+    linear-gradient(#FAFAFA, #FAFAFA),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.08) 0px,
+      rgba(255, 255, 255, 0.08) 1px,
+      transparent 1px,
+      transparent 3px
+    ),
+    linear-gradient(
+      135deg,
+      #1e293b 0%,
+      #64748b 20%,
+      #334155 40%,
+      #94a3b8 60%,
+      #1e293b 80%,
+      #475569 100%
+    ) !important;
+  animation: black-grey-glow 3s ease-in-out infinite;
 }
 
 
