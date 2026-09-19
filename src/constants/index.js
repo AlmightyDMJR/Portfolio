@@ -47,7 +47,7 @@ export const myProjects = [
   },
   {
     id: 3,
-    title: 'Crop Diagnosis',
+    title: 'Crop Cure',
     year: '2026',
     description:
       'An AI-powered agricultural tool for rapid crop disease detection and tailored recommendations.',
@@ -132,7 +132,7 @@ export const myProjects = [
   },
   {
     id: 7,
-    title: 'Mental Health & Wellness',
+    title: 'Mental Health',
     year: '2024',
     description:
       'A comprehensive mental health platform featuring Gemini AI mood analysis, real-time community chatrooms, and emergency crisis intervention.',
@@ -152,6 +152,28 @@ export const myProjects = [
       { id: 5, name: 'Socket.IO', path: '/assets/logos/socketio.svg' },
     ],
   },
+  {
+    id: 8,
+    title: 'PRD-Bot',
+    year: '2026',
+    description:
+      'Autonomous AI agent platform enforcing Product Requirements Documents (PRD) on GitHub issues with real-time drift detection and automated code generation.',
+    subDescription: [
+      'Architected an event-driven webhook pipeline via Inngest with durable background jobs and exponential-backoff retries',
+      'Engineered a three-pass AI analysis engine using Google Gemini 2.5 Flash for vision drift detection, strategic issue review, and rule enforcement',
+      'Constructed an autonomous Code Agent that fetches repo context, generates production code changes, and automatically opens GitHub pull requests',
+      'Implemented real-time live telemetry streaming to a Next.js 16 dashboard via Supabase Realtime broadcast channels and Clerk GitHub OAuth',
+    ],
+    href: 'https://github.com/Gintoki006/PRDbot',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxWs6NYqlRiEz1JaezzkocpnPwHEL8BT3BrNgIAzzWZg&s=10',
+    tags: [
+      { id: 1, name: 'Next.js 16', path: '/assets/logos/nextjs.svg' },
+      { id: 2, name: 'Gemini AI', path: '/assets/logos/ai.svg' },
+      { id: 3, name: 'Prisma', path: '/assets/logos/prisma.svg' },
+      { id: 4, name: 'Supabase', path: '/assets/logos/supabase.svg' },
+      { id: 5, name: 'Inngest', path: '/assets/logos/inngest.svg' },
+    ],
+  },
 ];
 
 export const mySocials = [
@@ -169,6 +191,12 @@ export const mySocials = [
     name: 'Instagram',
     href: 'https://www.instagram.com/the_almighty_dmjr/',
     icon: '/assets/socials/instagram.svg',
+  },
+  {
+    name: 'Discord',
+    username: 'AlmightyDMJR',
+    href: 'https://discord.com/users/AlmightyDMJR',
+    icon: '/assets/socials/discord.svg',
   },
 ];
 
@@ -201,10 +229,11 @@ export const experiences = [
     job: 'Continuous Learning',
     date: 'Ongoing',
     contents: [
-      'Hackathon Finalist in multiple State-level competitions',
-      'Active Open Source Contributor to high-profile React and Node.js repositories',
-      'Maintained a top percentile ranking in Competitive Programming on major platforms',
-      'Holds multiple certifications in Advanced Cloud Architecture, Agentic AI and Full-Stack Technologies',
+      'Completed Higher Secondary & Secondary Education with 90% marks from Ramakrishna Vivekananda Mission Vidyabhawan.',
+      'Finalist in Multiple State-level & University level Innovative Hackathons.',
+      'Open Source Contributor to  different high-profile repositories.',
+      'Maintained a top percentile ranking in Competitive Programming on major platforms and solved 500+ problems.',
+      'Holds Multiple Certifications in Advanced Cloud Architecture, Agentic AI and Full-Stack Technologies.',
     ],
   },
 ];
@@ -260,34 +289,34 @@ export const techStack = [
 // Hobbies and Interests Content Data
 export const hobbiesData = {
   sports: [
-    { name: 'Football', icon: 'Trophy', detail: 'Tactics & Premier League' },
-    { name: 'Cricket', icon: 'Target', detail: 'Strategy & Test Matches' },
+    { name: 'Football', icon: 'Trophy', detail: 'Played for 3rd Division & College Level' },
+    { name: 'Cricket', icon: 'Target', detail: 'Played tournaments in locality' },
     { name: 'Volleyball', icon: 'Activity', detail: 'Agility & Team Dynamics' },
     { name: 'Formula 1', icon: 'Zap', detail: 'Aerodynamics & Race Strategy' },
     { name: 'Badminton', icon: 'Flame', detail: 'Speed & Quick Reflexes' },
-    { name: 'Basketball', icon: 'Dribbble', detail: 'Pace & Spatial Awareness' },
+    { name: 'Table Tennis', icon: 'Dribbble', detail: 'Played Occasionally in School' },
   ],
   offTheScreen: [
     {
       title: 'Literature & Philosophy',
-      desc: 'Exploring deep existential prose and philosophical fiction from Dostoevsky to Camus and Murakami.',
+      desc: 'Explored literary works ranging from William Shakespeare to Rabindranath Tagore and Sarat Chandra Chattopadhyay.',
       tag: 'Reading',
     },
     {
       title: 'Poetry & Expressive Writing',
-      desc: 'Appreciating the rhythm of classical and modern verses that condense complex human emotion into words.',
+      desc: "Gulzar's rhythm of classical & Jaun Elia's modern verses that condense complex human emotion into words.", 
       tag: 'Poetry',
     },
     {
       title: 'Cinema as a Medium',
-      desc: 'Dissecting visual storytelling, atmospheric sound design, and auteur direction across global films.',
+      desc: 'Dissecting visual storytelling Satyajit Ray, atmospheric sound design, & auteur direction across global films of Christopher Nolan.',
       tag: 'Cinema',
     },
   ],
   alwaysLearning: {
     title: 'Continuous Craft & Technical Mastery',
     narrative: 'Software engineering is an ever-evolving craft. I dedicate time weekly to exploring emerging distributed paradigms, next-generation AI agent architectures, and bleeding-edge web standards to keep systems resilient and state-of-the-art.',
-    chips: ['AI Agents & LLMs', 'Distributed Systems', 'WebGL & Shaders', 'Rust & Systems', 'Cloud Architecture'],
+    chips: ['AI Agents & LLMs', 'Distributed Systems', 'System Designs', 'DSA & Competitive Programming', 'Cloud Architecture & DevOps','Photo - Video Editing','Animation',],
   },
   fallbackTracks: [
     {
@@ -407,7 +436,7 @@ export const interestsCardsData = [
       glow: 'rgba(244, 63, 94, 0.12)',
     },
     allTimeFavourite: {
-      title: 'Attack on Titan & Interstellar',
+      title: 'Attack on Titan & Harry Potter',
       detail: 'Intricate storytelling, moral complexity & mind-bending thrillers.',
     },
     genres: ['Psychological Thriller', 'Science Fiction', 'Fantasy - Drama','Slice Of Life', 'Mystery'],
@@ -460,7 +489,7 @@ export const interestsCardsData = [
       title: 'Bruno Mars & Anuv Jain',
       detail: 'Mind-expanding progressive genre-blending concept albums and monumental cinematic scores.',
     },
-    genres: ['Hiphop','Progressive Rock', 'Pop - RnB', 'Ambient & Metal'],
+    genres: ['Hiphop','Indie - Rock', 'Pop - RnB', 'Ambient & Metal'],
     currentFavourite: {
       title: 'Talha Anjum & Joji',
       detail: 'Deep heartbroken and soulful lyricism with eargasmic melodies & production.',

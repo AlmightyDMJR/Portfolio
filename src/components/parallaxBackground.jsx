@@ -26,8 +26,12 @@ const ParallaxBackground = () => {
   return (
     <div
       ref={ref}
-      className="absolute inset-0 overflow-hidden"
-      style={{ zIndex: 0 }}
+      className="absolute inset-0 overflow-hidden pointer-events-none"
+      style={{
+        zIndex: 0,
+        maskImage: 'linear-gradient(to bottom, black 0%, black 60%, transparent 95%)',
+        WebkitMaskImage: 'linear-gradient(to bottom, black 0%, black 60%, transparent 95%)',
+      }}
     >
       {layers.map((layer, i) => (
         <motion.div
@@ -52,15 +56,6 @@ const ParallaxBackground = () => {
           />
         </motion.div>
       ))}
-
-      {/* Overlay gradient at the bottom for smooth section transition */}
-      <div
-        className="absolute bottom-0 left-0 right-0 h-40"
-        style={{
-          background: 'linear-gradient(to top, #030412, transparent)',
-          zIndex: 10,
-        }}
-      />
     </div>
   );
 };

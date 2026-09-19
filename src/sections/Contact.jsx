@@ -50,7 +50,7 @@ const Contact = () => {
       showAlert('success', "Message sent! I'll get back to you within 24 hours. 🚀");
     } catch (err) {
       console.error('EmailJS error:', err);
-      showAlert('error', 'Something went wrong. Please try emailing me directly at digantamukherjee6@gmail.com');
+      showAlert('error', 'Something went wrong. Please try emailing me directly at goddmjr@gmail.com');
     } finally {
       setLoading(false);
     }
@@ -60,7 +60,7 @@ const Contact = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'digantamukherjee6@gmail.com',
+      value: 'goddmjr@gmail.com',
     },
     {
       icon: MapPin,
@@ -138,7 +138,7 @@ const Contact = () => {
                   value={form.name}
                   onChange={handleChange}
                   required
-                  placeholder="John Doe"
+                  placeholder=""
                   className="bg-navy/60 border-lavender/25 text-white placeholder:text-neutral-500 focus-visible:ring-lavender focus-visible:border-lavender/60 h-11 rounded-xl transition-all"
                 />
               </div>
@@ -155,7 +155,7 @@ const Contact = () => {
                   value={form.email}
                   onChange={handleChange}
                   required
-                  placeholder="john@example.com"
+                  placeholder="abc@example.com"
                   className="bg-navy/60 border-lavender/25 text-white placeholder:text-neutral-500 focus-visible:ring-lavender focus-visible:border-lavender/60 h-11 rounded-xl transition-all"
                 />
               </div>
@@ -184,7 +184,7 @@ const Contact = () => {
                 disabled={loading}
                 className="w-full h-11 py-3 rounded-xl text-sm font-semibold text-white transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer hover:opacity-95 active:scale-[0.99] border-0 mt-2"
                 style={{
-                  background: 'linear-gradient(135deg, #5c33cc, #7a57db)',
+                  background: 'linear-gradient(135deg, #05c6fbff, #de0de9ff)',
                   boxShadow: '0 0 25px rgba(92, 51, 204, 0.45)',
                 }}
               >
@@ -205,10 +205,10 @@ const Contact = () => {
               {/* Quick direct contact */}
               <div className="flex items-center justify-center gap-4 pt-3 border-t border-white/10">
                 <a
-                  href="mailto:digantamukherjee6@gmail.com"
+                  href="mailto:goddmjr@gmail.com"
                   className="text-xs text-neutral-400 hover:text-lavender transition-colors"
                 >
-                  📧 digantamukherjee6@gmail.com
+                  📧 goddmjr@gmail.com
                 </a>
               </div>
             </form>

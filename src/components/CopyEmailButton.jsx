@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 
-const CopyEmailButton = ({ email = 'digantamukherjee6@gmail.com' }) => {
+const CopyEmailButton = ({ email = 'goddmjr@gmail.com' }) => {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {

@@ -43,7 +43,11 @@ const Hero = () => {
       {/* 3D Canvas */}
       <div
         className="absolute inset-0 pointer-events-none md:pointer-events-auto"
-        style={{ zIndex: 1 }}
+        style={{
+          zIndex: 1,
+          maskImage: 'linear-gradient(to bottom, black 0%, black 80%, transparent 98%)',
+          WebkitMaskImage: 'linear-gradient(to bottom, black 0%, black 80%, transparent 98%)',
+        }}
       >
         <Canvas
           dpr={[1, 1.5]}

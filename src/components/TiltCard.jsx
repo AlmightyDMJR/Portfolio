@@ -6,12 +6,12 @@ const tiltMax = 7; // subtle tilt in degrees
 
 const glowColorThemes = {
   emerald: {
-    colorFrom: '#34d399',
+    colorFrom: '#57db96',
     colorTo: '#10b981',
-    shadow: 'group-hover:shadow-[0_0_32px_rgba(16,185,129,0.32),0_12px_28px_rgba(0,0,0,0.06)]',
-    baseBorder: 'border-emerald-400/30',
-    frameBg: 'bg-[#051811]',
-    bodyGlow: 'radial-gradient(ellipse 90% 60% at 50% 0%, rgba(52, 211, 153, 0.08) 0%, transparent 75%)',
+    shadow: 'group-hover:shadow-[0_0_36px_rgba(87,219,150,0.36),0_12px_28px_rgba(0,0,0,0.2)]',
+    baseBorder: 'border-black/30',
+    frameBg: 'bg-black',
+    bodyGlow: 'radial-gradient(ellipse 90% 60% at 50% 0%, rgba(87, 219, 150, 0.08) 0%, transparent 75%)',
   },
   amber: {
     colorFrom: '#fbbf24',
@@ -76,6 +76,14 @@ const glowColorThemes = {
     baseBorder: 'border-white/[0.12]',
     frameBg: 'bg-[#0c0e14]',
     bodyGlow: 'radial-gradient(ellipse 90% 60% at 50% 0%, rgba(203, 213, 225, 0.08) 0%, transparent 75%)',
+  },
+  black: {
+    colorFrom: '#ffffff',
+    colorTo: '#111827',
+    shadow: 'group-hover:shadow-[0_0_36px_rgba(0,0,0,0.65),0_12px_28px_rgba(0,0,0,0.35)]',
+    baseBorder: 'border-black/40',
+    frameBg: 'bg-black',
+    bodyGlow: 'radial-gradient(ellipse 90% 60% at 50% 0%, rgba(17, 24, 39, 0.08) 0%, transparent 75%)',
   },
 };
 
@@ -205,16 +213,18 @@ const TiltCard = ({
             aria-hidden="true"
           />
 
-          {/* Cursor-tracked radial glare sweep */}
+          {/* Cursor-tracked radial glare sweep (ambient behind content) */}
           <motion.div
-            className="pointer-events-none absolute inset-0 z-20 transition-opacity duration-200"
+            className="pointer-events-none absolute inset-0 z-0 transition-opacity duration-200"
             style={{
-              opacity: isHovered ? 0.3 : 0,
+              opacity: isHovered ? 0.2 : 0,
               background: glareBg,
             }}
           />
 
-          {children}
+          <div className="relative z-10 w-full h-full flex flex-col justify-between">
+            {children}
+          </div>
         </div>
       </motion.div>
     </motion.div>

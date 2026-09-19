@@ -16,7 +16,7 @@ const Experiences = () => {
         <p className="subtext uppercase tracking-widest mb-2">Where I&apos;ve worked</p>
         <h2 className="text-heading">Work Experience</h2>
         <p className="subtext mt-3 max-w-xl">
-          My professional journey — from frontend intern to senior engineer building products at scale.
+          My professional journey — from frontend intern to building products at scale.
         </p>
       </motion.div>
 

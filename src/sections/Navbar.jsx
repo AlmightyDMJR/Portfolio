@@ -92,19 +92,19 @@ const Navbar = () => {
   // Social Profile Items
   const socialButtons = [
     {
-      name: 'GitHub Profile',
+      name: 'GitHub',
       icon: <GitHubIcon />,
       onClick: () => openSocial(socialLinks.GitHub),
       href: socialLinks.GitHub,
     },
     {
-      name: 'LinkedIn Profile',
+      name: 'LinkedIn',
       icon: <LinkedInIcon />,
       onClick: () => openSocial(socialLinks.LinkedIn),
       href: socialLinks.LinkedIn,
     },
     {
-      name: 'Instagram Profile',
+      name: 'Instagram',
       icon: <InstagramIcon />,
       onClick: () => openSocial(socialLinks.Instagram),
       href: socialLinks.Instagram,

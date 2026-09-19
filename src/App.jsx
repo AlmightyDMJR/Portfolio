@@ -1,3 +1,4 @@
+import StarryBackground from './components/StarryBackground';
 import Navbar from './sections/Navbar';
 import Hero from './sections/Hero';
 import About from './sections/About';
@@ -12,8 +13,9 @@ import Footer from './sections/Footer';
 const App = () => {
   return (
     <>
+      <StarryBackground />
       <Navbar />
-      <main>
+      <main className="relative z-10">
         <Hero />
         <div className="container mx-auto max-w-7xl">
           <About />

@@ -119,7 +119,7 @@ export const PhotoGallery = ({
   subtitle = "A Journey Through Visual Stories",
   title = "Welcome to My",
   highlightWord = "Stories",
-  buttonText = "View All Stories",
+  buttonText,
   onButtonClick,
   className = "",
 }: PhotoGalleryProps) => {
@@ -250,14 +250,16 @@ export const PhotoGallery = ({
         </motion.div>
       </div>
 
-      <div className="flex w-full justify-center">
-        <Button
-          onClick={onButtonClick}
-          className="rounded-full px-8 py-2.5 text-sm font-semibold transition-all hover:scale-105"
-        >
-          {buttonText}
-        </Button>
-      </div>
+      {buttonText && (
+        <div className="flex w-full justify-center">
+          <Button
+            onClick={onButtonClick}
+            className="rounded-full px-8 py-2.5 text-sm font-semibold transition-all hover:scale-105"
+          >
+            {buttonText}
+          </Button>
+        </div>
+      )}
     </div>
   );
 };

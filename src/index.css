@@ -1,5 +1,5 @@
-/* Google Fonts — Funnel Display */
-@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400;500;600;700;800&display=swap');
+/* Google Fonts — Funnel Display, Fira Code & Space Grotesk */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Funnel+Display:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
 
 /* Tailwind CSS v4 */
 @import "tailwindcss";
@@ -8,6 +8,9 @@
    DESIGN TOKENS
    ============================================= */
 @theme {
+  --font-mono: 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-space: 'Space Grotesk', sans-serif;
+
   /* Color Palette */
   --color-primary:   #030412;
   --color-midnight:  #06091f;
@@ -155,6 +158,10 @@ body {
 /* =============================================
    REUSABLE UTILITY CLASSES
    ============================================= */
+
+.font-space {
+  font-family: 'Space Grotesk', sans-serif;
+}
 
 /* Layout */
 .c-space {

@@ -274,7 +274,7 @@ export function CardStack<T extends CardStackItem>({
                 <motion.div
                   key={item.id}
                   className={cn(
-                    "absolute bottom-0 rounded-2xl overflow-hidden shadow-2xl",
+                    "group absolute bottom-0 rounded-2xl shadow-2xl",
                     "will-change-transform select-none",
                     isActive
                       ? "cursor-grab active:cursor-grabbing"
@@ -375,7 +375,7 @@ export function CardStack<T extends CardStackItem>({
 
 function DefaultFanCard({ item }: { item: CardStackItem; active: boolean }) {
   return (
-    <div className="relative h-full w-full bg-[#111827] text-white">
+    <div className="relative h-full w-full bg-[#111827] text-white rounded-2xl overflow-hidden">
       {/* image */}
       <div className="absolute inset-0">
         {item.imageSrc ? (
