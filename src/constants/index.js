@@ -223,7 +223,7 @@ export const experiences = [
       'Worked along with the  junior developers and learnt & established CI/CD pipelines to streamline deployment',
     ],
   },
-  
+
   {
     title: 'Key Achievements & Academics',
     job: 'Continuous Learning',
@@ -256,7 +256,7 @@ export const reviews = [
     company: 'Heloix',
     username: '@vartika_jain',
     body: "Diganta is an exceptionally talented software engineer with a strong grasp of modern technologies. His ability to quickly learn and implement new concepts is impressive. During his internship, he consistently delivered high-quality work and demonstrated great potential.",
-    img: 'https://media.licdn.com/dms/image/v2/C560BAQGt5Tjyo9V_Xg/company-logo_200_200/company-logo_200_200/0/1630651367756/crazy_for_success_foundation_logo?e=2147483647&v=beta&t=zS-BhXPM0r_c5IJqpFL5NKoLU2MffYTBmNAQ6y5m780',
+    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrAurcIhba73rbDCWrQC2OhC0CP-A4ewBKiwxd1oYVQA&s=10',
     href: 'https://linkedin.com',
   },
   {
@@ -304,7 +304,7 @@ export const hobbiesData = {
     },
     {
       title: 'Poetry & Expressive Writing',
-      desc: "Gulzar's rhythm of classical & Jaun Elia's modern verses that condense complex human emotion into words.", 
+      desc: "Gulzar's rhythm of classical & Jaun Elia's modern verses that condense complex human emotion into words.",
       tag: 'Poetry',
     },
     {
@@ -316,7 +316,7 @@ export const hobbiesData = {
   alwaysLearning: {
     title: 'Continuous Craft & Technical Mastery',
     narrative: 'Software engineering is an ever-evolving craft. I dedicate time weekly to exploring emerging distributed paradigms, next-generation AI agent architectures, and bleeding-edge web standards to keep systems resilient and state-of-the-art.',
-    chips: ['AI Agents & LLMs', 'Distributed Systems', 'System Designs', 'DSA & Competitive Programming', 'Cloud Architecture & DevOps','Photo - Video Editing','Animation',],
+    chips: ['AI Agents & LLMs', 'Distributed Systems', 'System Designs', 'DSA & Competitive Programming', 'Cloud Architecture & DevOps', 'Photo - Video Editing', 'Animation',],
   },
   fallbackTracks: [
     {
@@ -375,7 +375,7 @@ export const galleryPhotos = [
     direction: "left",
     src: "/assets/leetcode.png",
     alt: "Coding Consistency & Achievement",
-  }, 
+  },
   {
     id: 2,
     order: 1,
@@ -385,7 +385,7 @@ export const galleryPhotos = [
     direction: "left",
     src: "/assets/skillde.png",
     alt: "Hackathon Winners",
-  }, 
+  },
   {
     id: 3,
     order: 2,
@@ -439,10 +439,10 @@ export const interestsCardsData = [
       title: 'Attack on Titan & Harry Potter',
       detail: 'Intricate storytelling, moral complexity & mind-bending thrillers.',
     },
-    genres: ['Psychological Thriller', 'Science Fiction', 'Fantasy - Drama','Slice Of Life', 'Mystery'],
+    genres: ['Psychological Thriller', 'Science Fiction', 'Fantasy - Drama', 'Slice Of Life', 'Mystery'],
     currentFavourite: {
       title: 'Bleach TYBW',
-      
+
       status: 'Currently Watching',
     },
     quote: 'Drawn to layered narratives, moral ambiguity, and cinematic animation craft.',
@@ -467,7 +467,7 @@ export const interestsCardsData = [
     genres: ['Tactical Football', 'Test Cricket', 'Formula 1', 'Volleyball'],
     currentFavourite: {
       title: 'Formula 1 & UCL',
-      
+
       status: 'Season Active',
     },
     quote: 'Whether on pitch,court,or track - strategy, stamina, and reflexes fuel my energy.',
@@ -489,7 +489,7 @@ export const interestsCardsData = [
       title: 'Bruno Mars & Anuv Jain',
       detail: 'Mind-expanding progressive genre-blending concept albums and monumental cinematic scores.',
     },
-    genres: ['Hiphop','Indie - Rock', 'Pop - RnB', 'Ambient & Metal'],
+    genres: ['Hiphop', 'Indie - Rock', 'Pop - RnB', 'Ambient & Metal'],
     currentFavourite: {
       title: 'Talha Anjum & Joji',
       detail: 'Deep heartbroken and soulful lyricism with eargasmic melodies & production.',
@@ -514,10 +514,10 @@ export const interestsCardsData = [
       title: 'Ghost Of Tsushima & Far Cry 3',
       detail: 'Living open worlds, uncompromising character arcs, and cinematic storytelling.',
     },
-    genres: ['Story-Driven RPGs', 'Tactical Shooters',  'Open World Builders', 'FPS'],
+    genres: ['Story-Driven RPGs', 'Tactical Shooters', 'Open World Builders', 'FPS'],
     currentFavourite: {
       title: 'FC 26 & Valorant',
-      
+
       status: 'Active Quest',
     },
     quote: 'Game design is the highest synergy of software architecture, art & storytelling.',
